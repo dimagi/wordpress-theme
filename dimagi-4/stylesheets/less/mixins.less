@@ -1,0 +1,55 @@
+.grid-width(@columns:1, @offset:0, @scale:1) {
+    width: (@columns*@colWidth + @colSpace*2*(@columns - 1) + @offset)*@scale;
+} 
+
+.grid-margin (@columns:1, @offset:0, @scale:1) {
+    margin-left: (@columns*@colWidth + @colSpace*2*(@columns + 1) + @offset)*@scale;
+}
+
+.grid-left (@columns:1, @offset:0, @scale:1) {
+    left: (@columns*@colWidth + @colSpace*2*(@columns + 1) + @offset)*@scale;
+}
+
+.clear-floats () {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.make-columns(@numCols: 4, @columnSpacing: @gridSpace) {
+    -moz-column-count: @numCols;
+	-moz-column-gap: @columnSpacing;
+	-webkit-column-count: @numCols;
+	-webkit-column-gap: @columnSpacing;
+	column-count: @numCols;
+	column-gap: @columnSpacing;
+}
+
+// Border Radius
+.border-radius-top(@radius) {
+	.border-radius-top-right(@radius);
+	.border-radius-top-left(@radius);
+}
+
+.border-radius-top-right(@radius) {
+   -webkit-border-top-right-radius: @radius;
+       -moz-border-radius-topright: @radius;
+       	   border-top-right-radius: @radius;
+}
+
+.border-radius-top-left(@radius) {
+   -webkit-border-top-left-radius: @radius;
+       -moz-border-radius-topleft: @radius;
+       	   border-top-left-radius: @radius;
+}
+
+.border-radius-bottom(@radius) {
+	-webkit-border-bottom-left-radius: @radius;
+   -webkit-border-bottom-right-radius: @radius;
+        -moz-border-radius-bottomleft: @radius;
+       -moz-border-radius-bottomright: @radius;
+       		border-bottom-left-radius: @radius;
+       	   border-bottom-right-radius: @radius;
+}

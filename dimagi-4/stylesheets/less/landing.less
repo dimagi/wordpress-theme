@@ -1,0 +1,64 @@
+.blurbs {
+	margin: @gridSpace 0;
+	section > h1 {
+		font-size: 16px;
+		margin-bottom: @colSpace/2;
+		a {
+			color: @textColor;
+		}
+	}
+	
+	.async-image {
+		.grid-width(3);
+		height: 144px;
+		.box-shadow(0 0 5px rgba(0,0,0,.35));
+		margin-bottom: 1em;
+	}
+}
+
+article section > p {
+	font-size: 12px;
+}
+
+.news {
+	margin-bottom: @gridSpace*2;
+	section > h1 {
+		font-size: 25px;
+		color: @dimagiOrange;
+		a {
+			color: @dimagiOrange;
+			&:hover {
+				color: @dimagiBlue;
+			}
+		}
+	}
+	section hgroup {
+		position: relative;
+		margin-top: .8em;
+		> h2 {
+			font-size: 14px;
+			margin: 0;
+			padding-top: 27px;
+			padding-bottom: 6px;
+			line-height: 18px;
+			a {
+				color: @textColor;
+				&:hover {
+					color: @dimagiOrange;
+				}
+			}
+		}
+		> h3 {
+			font-size: 12px;
+			color: rgba(0,0,0,.4);
+			position: absolute;
+			top: 0;
+			left: 0;
+			
+		}
+	} 
+	section > p {
+		padding-left: @gridSpace;
+	}
+	
+}

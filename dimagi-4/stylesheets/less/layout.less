@@ -1,0 +1,221 @@
+html, body { height: 100%; }
+
+body {
+	font-family: @sansFontFamily;
+}
+
+#content-wrap {
+// Necessary for sticky footer
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -@footerHeight;
+	
+	
+	&:after {
+		.clear-floats();
+		height: @footerHeight;
+	}
+	
+	&:before {
+		content: " ";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: @headerHeight;
+		background-color: #f0eeee;
+		#gradient > .vertical(#faf9f9, #f0eeee);
+		z-index: @zindexHeader;
+		.box-shadow(0 0px 2px rgba(0,0,0,.35));
+	}
+}
+
+header {
+	width: @documentWidth;
+	height: @headerHeight;
+	margin: 0 auto;
+	position: relative;
+	
+	h1 {
+		margin: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 150px;
+		height: 69px;
+		z-index: @zindexDropdown+1;
+	}
+	
+	@navRadius: 5px;
+	
+	nav > ul {
+		list-style: none;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-weight: 500;
+		
+		> li {
+			display: block;
+			position: relative;
+			float: left;
+			padding: 13px 5px 0px 0px;
+			
+			> a {
+				display: block;
+				padding: .5em 1em;
+				z-index: @zindexDropdown+1;
+				.animation-background-fade(.2s);
+				.border-radius(@navRadius);
+			}
+			&:hover > a {
+				text-decoration: none;
+				.box-shadow(0 -1px 3px rgba(0,0,0,.35));
+				color: @white;
+				background-color: @dimagiBlue;
+				.border-radius-top(@navRadius);
+				.border-radius-bottom(0);
+			}
+			
+			ul {
+				list-style: none;
+				padding: .5em 0;
+				margin: 0;
+				z-index: @zindexDropdown;
+				
+				background-color: @dimagiBlue;
+				.box-shadow(0 2px 3px rgba(0,0,0,.35));
+				.border-radius-top-left(0);
+				.border-radius-top-right(@navRadius);
+				.border-radius-bottom(@navRadius);
+				
+				position:absolute; 
+			    top:-99999px;    /* Remove them out of viewport */
+			    left:0;  
+			    .animation-fade-in(.2s);
+			    
+				> li > a {
+					.grid-width(2);
+					padding: .5em 1em;
+					color: @white;
+					display: block;
+					.animation-background-fade(.1s);
+					
+					&:hover {
+						color: @dimagiBlue;
+						background-color: @white;
+						text-decoration: none;
+					}
+				}
+			}
+			
+			&:hover > ul {
+				opacity: 1; 
+				position:absolute; 
+				top:99%; 
+				left:0;
+			}
+		}
+	}
+
+}
+
+.content {
+	width: @documentWidth;
+	margin: 0 auto;
+	.row {
+		margin-left: -@colSpace;
+	}
+	a {
+		.animation-fade(color, .3s);
+	}
+	> article > section {
+		a:hover {
+			text-decoration: none;
+			color: @dimagiOrange;
+		}
+	}
+	
+}
+
+footer {
+// Necessary for sticky footer
+	height: @footerHeight;
+    margin-top: -@footerHeight;
+    
+    background-color: @footerColor;
+    color: @white;
+    
+    .content {
+	    padding-top: @gridSpace;
+    }
+    
+    nav {
+    	a {
+	    	color: @white;
+	    	display: block;
+	    	&:hover {
+		    	color: darken(@white, 20);
+		    	text-decoration: none;
+	    	}
+	    }
+	    h1 {
+	    	font-size: 1.3em;
+	    	border-bottom: darken(@white, 60) 1px solid;
+	    	margin-bottom: @colSpace;
+	    	
+	    	a{
+		    	color: darken(@white, 20);
+			    &:hover {
+				    color: darken(@white, 40);
+			    }
+		    }
+	    }
+	    ul {
+		    list-style: none;
+		    margin: 0;
+		    li {
+		    	line-height: 1.5em;
+		    }
+	    }
+	    &.span4 ul {
+		    li {
+		    	.grid-width(2);
+		    	display: inline-block;
+		    }
+	    }
+	}
+    
+    &:before {
+	    content: " ";
+	    display: block;
+	    height: 4px;
+	    width: 100%;
+	    background-color: @dimagiOrange;
+    }
+    
+    .social {
+	    text-align: right;
+	    margin-bottom: @colSpace;
+	    a {
+	    	.opacity(70);  	
+	    	&:hover {
+		    	.opacity(100);
+		    	.animation-fade(opacity, .5s);
+	    	}
+	    }
+    }
+    
+    
+	address {
+		text-align: right;
+		font-size: 11px;
+		color: darken(@white, 20);
+		> section {
+			margin-bottom: @colSpace;
+		}
+	}
+}
