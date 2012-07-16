@@ -9,6 +9,7 @@ Template Name: Archives
 ?>
 
 <?php get_header(); ?>
+archives.php
 
 <div id="content" class="widecolumn">
 

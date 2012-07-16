@@ -9,6 +9,8 @@ Template Name: Our Work
 
 get_header(); ?>
 
+our-work.php
+
 	<div id="content" class="narrowcolumn">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

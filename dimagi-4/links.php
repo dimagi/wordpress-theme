@@ -10,7 +10,7 @@ Template Name: Links
 ?>
 
 <?php get_header(); ?>
-
+links.php
 <div id="content" class="widecolumn">
 
 <h2>Links:</h2>

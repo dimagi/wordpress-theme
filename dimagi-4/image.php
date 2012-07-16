@@ -6,7 +6,7 @@
 
 get_header();
 ?>
-
+image.php
 	<div id="content" class="widecolumn">
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

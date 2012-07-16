@@ -5,7 +5,7 @@
  */
 
 get_header(); ?>
-
+search.php
 	<div id="content" class="narrowcolumn">
 	
 	<div class="post"><div class="entry">

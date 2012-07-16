@@ -9,7 +9,7 @@ Template Name: Portal
 ?>
 
 <?php get_header(); ?>
-
+portal.php
 	<div id="content" class="narrowcolumn">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

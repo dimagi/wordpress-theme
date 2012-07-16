@@ -1,15 +1,12 @@
 html, body { height: 100%; }
 
-body {
-	font-family: @sansFontFamily;
-}
-
 #content-wrap {
 // Necessary for sticky footer
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
 	margin: 0 auto -@footerHeight;
+	position: relative;
 	
 	
 	&:after {
@@ -126,8 +123,13 @@ header {
 .content {
 	width: @documentWidth;
 	margin: 0 auto;
+	padding: @gridSpace 0;
+	
 	.row {
 		margin-left: -@colSpace;
+		.row {
+			margin-left: 0;
+		}
 	}
 	a {
 		.animation-fade(color, .3s);
@@ -148,10 +150,6 @@ footer {
     
     background-color: @footerColor;
     color: @white;
-    
-    .content {
-	    padding-top: @gridSpace;
-    }
     
     nav {
     	a {
@@ -178,6 +176,7 @@ footer {
 		    list-style: none;
 		    margin: 0;
 		    li {
+		    	font-size: 12px;
 		    	line-height: 1.5em;
 		    }
 	    }
@@ -208,7 +207,6 @@ footer {
 	    	}
 	    }
     }
-    
     
 	address {
 		text-align: right;

@@ -6,12 +6,9 @@
 
 get_header();
 ?>
-
-	<div id="content" class="narrowcolumn">
-
-		<h2 class="center">Error 404 - Not Found</h2>
-
-	</div>
+	<article>
+		<h1>Sorry, we couldn't find that page!</h1>
+	</article>
 
 <?php get_sidebar(); ?>
 

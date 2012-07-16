@@ -49,7 +49,7 @@
 	        		</nav>
 	        		<div class="span2">
 	        			<section class="social">
-	        				<a href="http://twitter.com/dimagi" rel="tooltip" title="Follow @dimagi on Twitter"><img src="img/social/twitter.png" alt="@dimagi" /></a><a href="http://github.com/dimagi" rel="tooltip" title="Fork dimagi on github"><img src="img/social/github.png" alt="dimagi on github" /></a><a href="http://facebook.com/dimagi.inc" rel="tooltip" title="Like dimagi on Facebook"><img src="img/social/facebook.png" alt="like dimagi on facebook" /></a>
+	        				<a href="http://twitter.com/dimagi" rel="tooltip" title="Follow @dimagi on Twitter"><img src="<?php bloginfo('template_directory'); ?>/img/social/twitter.png" alt="@dimagi" /></a><a href="http://github.com/dimagi" rel="tooltip" title="Fork dimagi on github"><img src="<?php bloginfo('template_directory'); ?>/img/social/github.png" alt="dimagi on github" /></a><a href="http://facebook.com/dimagi.inc" rel="tooltip" title="Like dimagi on Facebook"><img src="<?php bloginfo('template_directory'); ?>/img/social/facebook.png" alt="like dimagi on facebook" /></a>
 	        			</section>
 		        		<address>
 		        			<section>
@@ -75,8 +75,8 @@
         		</div>
         	</div>
         </footer>
-        <script src="js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="js/dimagi.landing.js" type="text/javascript"></script>
+        <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="<?php bloginfo('template_directory'); ?>/js/dimagi.landing.js" type="text/javascript"></script>
         <script type="text/javascript">
         	var bannerImages = new DimagiAsyncImages({
 	        	container: '#dimagiBanner'

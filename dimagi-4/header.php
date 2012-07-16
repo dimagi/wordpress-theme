@@ -19,16 +19,18 @@
 
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli" />
-        <link rel="stylesheet" href="stylesheets/css/main.css" media="screen" />
+        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/css/main.css" media="screen" />
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php get_category_feed_link('46'); ?>" />
         
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
         <?php include_once("analytics.php") ?>
-        <?php wp_enqueue_script('jquery'); ?>
+        
+        <?php wp_deregister_script( 'jquery' );
+	    wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
+	    wp_enqueue_script( 'jquery' ); ?>
         
         <!--[if lt IE 9]>
-        <link rel="stylesheet" href="stylesheets/css/ie_fixes.css" />
-        <script src="js/html5shiv.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/css/ie_fixes.css" />
+        <script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js" type="text/javascript"></script>
         <![endif]-->
         <!--[if lt IE 8]>
         <script type="text/javascript">  	
@@ -51,7 +53,7 @@
     		</div>
     		<![endif]-->
 		    <header>
-		    	<h1><a href="http://www.dimagi.com/"><img src="img/dimagi-logo.png" width="150" height="69" alt="Dimagi" /></a></h1>
+		    	<h1><a href="http://www.dimagi.com/"><img src="<?php bloginfo('template_directory'); ?>/img/dimagi-logo.png" width="150" height="69" alt="Dimagi" /></a></h1>
 		        <nav>
 			    	<ul>
 			    		<li>
