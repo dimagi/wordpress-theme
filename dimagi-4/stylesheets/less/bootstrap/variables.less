@@ -21,8 +21,8 @@
 
 // Accent colors
 // -------------------------
-@blue:                  @dimagiBlue;
-@blueDark:              #0064cd;
+@blue:                  lighten(@dimagiBlue,30);
+@blueDark:              @dimagiBlue;
 @green:                 #46a546;
 @red:                   #9d261d;
 @yellow:                #ffc40d;
@@ -73,8 +73,8 @@
 @btnBackgroundHighlight:            darken(@white, 10%);
 @btnBorder:                         #ccc;
 
-@btnPrimaryBackground:              @linkColor;
-@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 15%);
+@btnPrimaryBackground:              spin(lighten(@dimagiBlue, 10), 2%);
+@btnPrimaryBackgroundHighlight:     @dimagiBlue;
 
 @btnInfoBackground:                 #5bc0de;
 @btnInfoBackgroundHighlight:        #2f96b4;

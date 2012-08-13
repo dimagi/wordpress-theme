@@ -1,5 +1,10 @@
 .blurbs {
 	margin: @gridSpace 0;
+	
+	img {
+		.box-shadow(0 0 5px rgba(0,0,0,.35));
+	}
+	
 	section > h1 {
 		font-size: 16px;
 		margin-bottom: @colSpace/2;
@@ -15,7 +20,9 @@
 	}
 }
 
-article section > p {
+.blurbs section > p,
+.news section > p
+.bios p {
 	font-size: 12px;
 }
 

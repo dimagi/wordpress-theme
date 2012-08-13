@@ -70,17 +70,17 @@ get_header(); ?>
 			    	<section class="span3">
 				    	<h1><a href="http://www.commcarehq.org/">CommCare</a></h1>
 				    	<div class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/blurbs/commcare.jpg" data-imglink="http://www.commcarehq.org/"></div>
-				    	<p>Turnkey solution for community health and extension workers providing case management, data collection, and data management. <a href="http://www.commcarehq.org/register/">Sign up</a> for an account today!</p>
+				    	<p>CommCare is a turnkey solution for community health and extension workers that provides case management, data collection, and data management. <a href="http://www.commcarehq.org/register/">Sign up</a> for an account today!</p>
 			    	</section>
 			    	<section class="span3">
 				    	<h1><a href="http://www.dimagi.com/technologies/">Open Source Platforms</a></h1>
 				    	<div class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/blurbs/open_source.jpg" data-imglink="http://www.dimagi.com/technologies/"></div>
-				    	<p>Dimagi is an leader in building and supporting open source software for low resources settings.</p>
+				    	<p>Dimagi is a leader in building and supporting open source software for low resource settings.</p>
 			    	</section>
 			    	<section class="span3">
 				    	<h1><a href="http://www.dimagi.com/services/">Technology Consulting</a></h1>		
 				    	<div class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/blurbs/consulting.jpg" data-imglink="http://www.dimagi.com/services/"></div>		    	
-				    	<p>Dimagi will to collaborate with your organization to build innovation technology solutions.</p>
+				    	<p>Dimagi will collaborate with your organization to build innovative technology solutions.</p>
 			    	</section>
 			    	<section class="span3">
 				    	<h1>Research</h1>

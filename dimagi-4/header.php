@@ -17,7 +17,7 @@
         
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="http://www.dimagi.com/favicon.png" type="image/x-icon" />
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli" />
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/css/main.css" media="screen" />
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php get_category_feed_link('46'); ?>" />
@@ -57,7 +57,7 @@
 		        <nav>
 			    	<ul>
 			    		<li>
-			    			<a href="<?php echo get_permalink('70'); ?>"><?php $cat=get_category('32'); echo $cat->name; ?></a>
+			    			<a href="<?php echo get_permalink('3015'); ?>"><?php $cat=get_category('32'); echo $cat->name; ?></a>
 			    			<?php $wp_query_technologies = new WP_Query('cat=32,-38&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); ?>
 			    			<ul>
 			    				<li><a href="http://www.commcarehq.org/">CommCare HQ</a></li>

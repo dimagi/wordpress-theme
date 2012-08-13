@@ -12,7 +12,7 @@
         		<section class="row">
 	        		<nav class="span2">
 	        			<?php query_posts('cat=32,-38&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); ?>
-	        			<h1><a href="<?php echo get_permalink('70'); ?>"><?php echo get_cat_name('32'); ?></a></h1>
+	        			<h1><a href="<?php echo get_permalink('3015'); ?>"><?php echo get_cat_name('32'); ?></a></h1>
 	        			<ul>
 	        				<li><a href="http://www.commcarehq.org/">CommCare</a></li>
 							<?php while(have_posts()) { the_post(); ?>
@@ -88,6 +88,7 @@
         	
         	var blurbs = new DimagiAsyncImages({});
         	blurbs.init();
+        	
         </script>
         <?php wp_footer(); ?>
     </body>

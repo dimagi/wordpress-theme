@@ -6,13 +6,6 @@ html, body { height: 100%; }
 	height: auto !important;
 	height: 100%;
 	margin: 0 auto -@footerHeight;
-	position: relative;
-	
-	
-	&:after {
-		.clear-floats();
-		height: @footerHeight;
-	}
 	
 	&:before {
 		content: " ";
@@ -27,6 +20,16 @@ html, body { height: 100%; }
 		z-index: @zindexHeader;
 		.box-shadow(0 0px 2px rgba(0,0,0,.35));
 	}
+	/*
+&.adminbar:before {
+		top: 29px;
+	}
+	
+*/
+	&:after {
+		.clear-floats();
+		height: @footerHeight;
+	}
 }
 
 header {
@@ -34,6 +37,8 @@ header {
 	height: @headerHeight;
 	margin: 0 auto;
 	position: relative;
+	
+	
 	
 	h1 {
 		margin: 0;

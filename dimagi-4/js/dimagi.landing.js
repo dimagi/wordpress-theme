@@ -16,12 +16,15 @@ var DimagiAsyncImages = function(options) {
 	var loadImage = function(container) {
 		return function (data) {
 			var imageLink = container.data('imglink');
-			var image = $('<img />').attr('src', container.data('imgsrc'));
+			var image = $('<img />').attr('src', container.data('imgsrc')).attr('alt', "");
 			if (imageLink)
 				image = $('<a />').attr('href', imageLink).append(image);
 			image.attr('style', 'display:none;');
 			container.append(image);
 			image.fadeIn();
+			$('[data-spy="scroll"]').each(function () {
+			  $(this).scrollspy('refresh');
+			});
 		}	
 	};
 	
