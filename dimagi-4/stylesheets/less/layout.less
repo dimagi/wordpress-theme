@@ -15,7 +15,7 @@ html, body { height: 100%; }
 		left: 0;
 		width: 100%;
 		height: @headerHeight;
-		background-color: #f0eeee;
+		background-color: @headerBackgroundColor;
 		#gradient > .vertical(#faf9f9, #f0eeee);
 		z-index: @zindexHeader;
 		.box-shadow(0 0px 2px rgba(0,0,0,.35));
@@ -123,6 +123,44 @@ header {
 		}
 	}
 
+}
+.announcement {
+	width: 100%;
+	#gradient > .vertical(darken(@backgroundColor, 8), darken(@backgroundColor, 3));
+	margin-top: 2px;
+	.announcement-content {
+		width: @documentWidth;
+		margin: 0 auto;
+		padding: .5em 0 .6em;
+		text-align: right;
+		p {
+			display: inline-block;
+			padding: 0 .5em;
+			margin: 0;
+			background-color: rgba(126,88,63,.1);
+			padding: 2px .5em;
+		}
+		a{
+			font-weight: normal;
+			text-transform: uppercase;
+			color: @white;
+			font-size: .85em;
+			display: inline-block;
+			background-color: rgba(126,88,63,.4);
+			.border-radius(3px 0 0 3px);
+			padding: 2px .5em;
+			vertical-align: top;
+			&.learn-more {
+				.border-radius(0 3px 3px 0);
+				background-color: @dimagiOrange;
+			}
+			&:hover {
+				text-decoration: none;
+				background-color: @dimagiBlue;
+			}
+		}
+		
+	}
 }
 
 .content {

@@ -2007,7 +2007,7 @@ table .span24 {
 .open {
   *z-index: 1000;
 }
-.open  > .dropdown-menu {
+.open > .dropdown-menu {
   display: block;
 }
 .pull-right > .dropdown-menu {
@@ -3410,7 +3410,7 @@ input[type="submit"].btn.btn-mini {
     -webkit-box-shadow: inset 0 1px 0 #ffffff, 0 1px 5px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: inset 0 1px 0 #ffffff, 0 1px 5px rgba(0, 0, 0, 0.1);
     box-shadow: inset 0 1px 0 #ffffff, 0 1px 5px rgba(0, 0, 0, 0.1);
-    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
     /* IE6-9 */
   
   }
@@ -4467,6 +4467,55 @@ header nav > ul > li:hover > ul {
   top: 99%;
   left: 0;
 }
+.announcement {
+  width: 100%;
+  background-color: #f0e7e1;
+  background-image: -moz-linear-gradient(top, #ece1da, #f5efeb);
+  background-image: -ms-linear-gradient(top, #ece1da, #f5efeb);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ece1da), to(#f5efeb));
+  background-image: -webkit-linear-gradient(top, #ece1da, #f5efeb);
+  background-image: -o-linear-gradient(top, #ece1da, #f5efeb);
+  background-image: linear-gradient(top, #ece1da, #f5efeb);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ece1da', endColorstr='#f5efeb', GradientType=0);
+  margin-top: 2px;
+}
+.announcement .announcement-content {
+  width: 960px;
+  margin: 0 auto;
+  padding: .5em 0 .6em;
+  text-align: right;
+}
+.announcement .announcement-content p {
+  display: inline-block;
+  padding: 0 .5em;
+  margin: 0;
+  background-color: rgba(126, 88, 63, 0.1);
+  padding: 2px .5em;
+}
+.announcement .announcement-content a {
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: .85em;
+  display: inline-block;
+  background-color: rgba(126, 88, 63, 0.4);
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+  padding: 2px .5em;
+  vertical-align: top;
+}
+.announcement .announcement-content a.learn-more {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  background-color: #f58220;
+}
+.announcement .announcement-content a:hover {
+  text-decoration: none;
+  background-color: #003d71;
+}
 .content {
   width: 960px;
   margin: 0 auto;
@@ -4750,7 +4799,7 @@ footer address > section {
   margin-bottom: 1em;
 }
 .blurbs section > p,
-.news section > p.bios p {
+.news section > p .bios p {
   font-size: 12px;
 }
 .news {

@@ -99,4 +99,11 @@
 			    	</ul>
 		        </nav>
 		    </header>
+		    
+		    <aside class="announcement">
+		    	<div class="announcement-content">
+		    		<a href="http://www.commcarehq.org/div2/round1">Request for Applications</a><p>CommCare Proof of Concept in India.</p><a class="learn-more" href="http://www.commcarehq.org/div2/round1">Learn More</a>
+		    	</div>
+		    </aside>
+		    
 		    <div class="content">
