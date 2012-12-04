@@ -19,7 +19,7 @@
 
         <link rel="shortcut icon" href="http://www.dimagi.com/favicon.png" type="image/x-icon" />
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli" />
-        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/css/main.css" media="screen" />
+        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/css/main.css?v=2" media="screen" />
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php get_category_feed_link('46'); ?>" />
         
         <?php include_once("analytics.php") ?>
@@ -99,11 +99,14 @@
 			    	</ul>
 		        </nav>
 		    </header>
-		    
+<?php		    
+/*
 		    <aside class="announcement">
 		    	<div class="announcement-content">
-		    		<a href="http://www.commcarehq.org/div2/round1">Request for Applications</a><p>CommCare Proof of Concept in India.</p><a class="learn-more" href="http://www.commcarehq.org/div2/round1">Learn More</a>
+		    		<a href="http://www.commcarehq.org/div2/round1">Request for Applications</a><p>CommCare Proof of Concept in India. <small>40 organizations. Free phones. Free support.</small></p><a class="learn-more" href="http://www.commcarehq.org/div2/round1">Learn More</a>
 		    	</div>
 		    </aside>
+*/
+?>
 		    
 		    <div class="content">

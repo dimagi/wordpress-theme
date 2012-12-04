@@ -4516,6 +4516,9 @@ header nav > ul > li:hover > ul {
   text-decoration: none;
   background-color: #003d71;
 }
+.announcement .announcement-content small {
+  color: #3c3c3c;
+}
 .content {
   width: 960px;
   margin: 0 auto;
