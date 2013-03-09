@@ -52,3 +52,5 @@ def deploy():
         run('git pull --rebase origin %(code_branch)s' % env)
         run('rm -r %(theme_root)s' % env)
         run('cp -r %(repo_theme)s %(theme_root)s' % env)
+        if env.environment == 'staging':  
+          run('cp style-beta.css %(theme_root)s/style.css' % env)
