@@ -1,48 +1,54 @@
-from fabric.api import *
+from fabric.api import run, roles, execute, task, sudo, env, parallel
 from fabric.contrib import console
 from fabric import utils
+import posixpath
+from fabric.operations import prompt, require
+from fabric.context_managers import cd
 
 env.code_repo = 'https://github.com/dimagi/wordpress-theme.git'
 env.code_branch = 'master'
 env.root = root = '/home/content/d/i/m/dimagi'
-env.repo_root = repo = _join(root, 'sites/wordpress-theme')
-env.repo_theme = _join(repo, 'dimagi-4')
-theme = _join(root, 'html/wp/wp-content/themes')
-env.sudo_user = 'dimagi'
 env.hosts = ['dimagi.com']
-env.environment = 'production'
+env.user = 'dimagi'
+theme = posixpath.join(root, 'html/wp/wp-content/themes')
+
+@task
+def _setup_path():
+    # using posixpath to ensure unix style slashes. See bug-ticket: http://code.fabfile.org/attachments/61/posixpath.patch
+    env.repo_root = repo = posixpath.join(root, 'sites/wordpress-theme')
+    env.repo_theme = posixpath.join(repo, 'dimagi-4')
+    env.user = prompt("Username: ", default=env.user)
 
 
-def _join(*args):
-    """
-    We're deploying on Linux, so hard-code that path separator here.
-    """
-    return '/'.join(args)
-
-
+@task
 def production():
     """ use production environment on dimagi.com"""
-    env.theme_root = _join(theme, 'dimagi-4')
-    env.user = prompt("Username: ", default=env.user)
+    env.theme_root = posixpath.join(theme, 'dimagi-4')
+    env.environment = 'production'
     
+    _setup_path()
     
+
+@task
 def staging():
     """ use staging environment on dimagi.com"""
-    env.theme_root = _join(theme, 'dimagi-beta')
+    env.theme_root = posixpath.join(theme, 'dimagi-beta')
     env.environment = 'staging'
     env.code_branch = 'staging'
-    env.user = prompt("Username: ", default=env.user)
+
+    _setup_path()
 
 
+@task
 def deploy():
     """ Deploy to remote host. """
-    require('root', provided_by=(env.environment))
+    require('root', provided_by=('staging', 'production'))
     if env.environment == 'production':
         if not console.confirm('Are you sure you want to deploy from github to production?', default=False):
             utils.abort('Production deployment aborted.')
 
     with cd(env.repo_root):
-      sudo('git checkout %(code_branch)s' % env, user=env.sudo_user)
-      sudo('git pull --rebase origin %(code_branch)s' % env, user=env.sudo_user)
-      sudo('rm -r %(theme_root)s' % env, user=env.sudo_user)
-      sudo('cp -r %(repo_theme)s %(theme_root)s' % env, user=env.sudo_user)
+        run('git checkout %(code_branch)s' % env)
+        run('git pull --rebase origin %(code_branch)s' % env)
+        run('rm -r %(theme_root)s' % env)
+        run('cp -r %(repo_theme)s %(theme_root)s' % env)

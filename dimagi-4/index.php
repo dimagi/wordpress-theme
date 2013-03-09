@@ -92,7 +92,7 @@ get_header(); ?>
 			    <img src="<?php bloginfo('template_directory'); ?>/img/divider.png" width="960" height="33" alt="divider" />
 				<article class="row news">
 			    	<section class="span6">
-			    		<h1><a href="/category/blog/">Staff Blog</a></h1>
+			    		<h1><a href="/category/blog/">TEST Staff Blog</a></h1>
 			    		<?php query_posts('cat=39,-46&showposts=3'); if (have_posts()) : ?>
 			    		<!--<a href="/category/blog/feed/"><img src="<?php bloginfo('template_url'); ?>/images/feed-icon.png"></a>-->
 			    		<?php while (have_posts()) : the_post(); ?>
