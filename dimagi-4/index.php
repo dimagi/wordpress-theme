@@ -22,6 +22,28 @@ get_header(); ?>
 				    			</h2>
 				    		</article>
 			    		</div>
+			    		<div id="banner-commconnect" class="item">
+				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/commconnect.jpg">
+				    			<hgroup>
+				    				<h1 class="big pull-left" style="text-align: right;">CommConnect</h1>
+				    				<h2 class="pull-right orange" style="width: 300px; top: 90px;">A solution for two-way messaging conditional reminders, surveys and broadcast messages.</h2>
+				    			</hgroup>
+				    			<h2 class="pull-left orange" style="top:28px; width:234px;">
+				    				<a href="http://www.dimagi.com/">Use on its own or integrate with CommCare. <span class="blue">Learn More.</span></a>
+				    			</h2>
+				    		</article>
+			    		</div>
+			    		<div id="banner-commconnect" class="item">
+				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/commconnect.jpg">
+				    			<hgroup>
+				    				<h1 class="big pull-right blue" style="text-align: right;">CommTrack</h1>
+				    				<h2 class="pull-right" style="width: 300px; top: 90px;">Stock tracking, requisition planning, and delivery acknowledgement for mobile workers. <a class="orange" href="http://www.dimagi.com/">Learn More</a></h2>
+				    			</hgroup>
+				    			<h2 class="pull-left orange" style="top:28px; width:234px;">
+				    				<a href="http://www.dimagi.com/">A tool for mobile logistics and supply chain management.</a>
+				    			</h2>
+				    		</article>
+			    		</div>
 			    		<div id="banner-hire" class="item">
 				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/brazil.jpg">
 				    			<hgroup>
@@ -73,14 +95,14 @@ get_header(); ?>
 				    	<p>CommCare is a turnkey solution for community health and extension workers that provides case management, data collection, and data management. <a href="http://www.commcarehq.org/register/">Sign up</a> for an account today!</p>
 			    	</section>
 			    	<section class="span3">
-				    	<h1><a href="http://www.dimagi.com/technologies/">Open Source Platforms</a></h1>
-				    	<div class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/blurbs/open_source.jpg" data-imglink="http://www.dimagi.com/technologies/"></div>
-				    	<p>Dimagi is a leader in building and supporting open source software for low resource settings.</p>
+				    	<h1><a href="http://www.dimagi.com/technologies/">CommConnect</a></h1>
+				    	<div class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/blurbs/commconnect.jpg" data-imglink="http://www.dimagi.com/technologies/"></div>
+				    	<p>CommConnect is a solution for building SMS applications allowing for two-way messaging, conditional reminders, surveys and broadcast messages.  It can be used on its own, or integrated into a CommCare application. <a href="#">Learn More</a></p>
 			    	</section>
 			    	<section class="span3">
-				    	<h1><a href="http://www.dimagi.com/services/">Technology Consulting</a></h1>		
-				    	<div class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/blurbs/consulting.jpg" data-imglink="http://www.dimagi.com/services/"></div>		    	
-				    	<p>Dimagi will collaborate with your organization to build innovative technology solutions.</p>
+				    	<h1><a href="http://www.dimagi.com/services/">CommTrack</a></h1>		
+				    	<div class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/blurbs/commtrack.jpg" data-imglink="http://www.dimagi.com/services/"></div>		    	
+				    	<p>CommTrack is a tool for mobile logistics and supply chain management. It supports mobile workers for better stock tracking, requisition planning, and delivery acknowledgement using either SMS or a CommCare application. <a href="#">Learn More</a></p>
 			    	</section>
 			    	<section class="span3">
 				    	<h1>Research</h1>
