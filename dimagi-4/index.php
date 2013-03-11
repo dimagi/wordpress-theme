@@ -34,7 +34,7 @@ get_header(); ?>
 				    		</article>
 			    		</div>
 			    		<div id="banner-commconnect" class="item">
-				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/commconnect.jpg">
+				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/commtrack.jpg">
 				    			<hgroup>
 				    				<h1 class="big pull-right blue" style="text-align: right;">CommTrack</h1>
 				    				<h2 class="pull-right" style="width: 300px; top: 90px;">Stock tracking, requisition planning, and delivery acknowledgement for mobile workers. <a class="orange" href="http://www.dimagi.com/">Learn More</a></h2>
@@ -84,7 +84,7 @@ get_header(); ?>
 		    		</div>
 		    	</div>
 		    	<div class="dimagi-carousel-controls">
-			    	<a class="carousel-control on" href="#dimagiBanner" data-slidenum="0"></a><a class="carousel-control" href="#dimagiBanner" data-slidenum="1"></a><a class="carousel-control" href="#dimagiBanner" data-slidenum="2"></a><a class="carousel-control" href="#dimagiBanner" data-slidenum="3"></a><a class="carousel-control" href="#dimagiBanner" data-slidenum="4"></a>
+			    	<a class="carousel-control on" href="#dimagiBanner" data-slidenum="0"></a><a class="carousel-control" href="#dimagiBanner" data-slidenum="1"></a><a class="carousel-control" href="#dimagiBanner" data-slidenum="2"></a><a class="carousel-control" href="#dimagiBanner" data-slidenum="3"></a><a class="carousel-control" href="#dimagiBanner" data-slidenum="4"><a class="carousel-control" href="#dimagiBanner" data-slidenum="5"><a class="carousel-control" href="#dimagiBanner" data-slidenum="6"></a>
 		    	</div>
 				
 				
