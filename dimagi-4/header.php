@@ -58,7 +58,7 @@
 			    	<ul>
 			    		<li>
 			    			<a href="<?php echo get_permalink('3015'); ?>"><?php $cat=get_category('32'); echo $cat->name; ?></a>
-			    			<?php $wp_query_technologies = query_posts('section_name=Technologies'); ?>
+			    			<?php $wp_query_technologies = new WP_Query('section_name=Technologies'); ?>
 			    			<ul>
 			    				<li><a href="http://www.commcarehq.org/">CommCare HQ</a></li>
 			    				<?php while($wp_query_technologies->have_posts()) { $wp_query_technologies->the_post(); ?>
