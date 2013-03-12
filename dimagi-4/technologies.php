@@ -26,6 +26,7 @@ get_header(); ?>
 	            </div>
 	        </div>
 	    </div>
+	    <?=query_posts('section_name=Technologies');?>
 		<?php query_posts('section_name=Technologies'); while ( have_posts() ) { the_post(); ?>
 			<div class="span6">
 				<div class="well" style="height:100px;">
