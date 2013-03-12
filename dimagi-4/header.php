@@ -19,7 +19,7 @@
 
         <link rel="shortcut icon" href="http://www.dimagi.com/favicon.png" type="image/x-icon" />
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli" />
-        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/css/main.css?v=2" media="screen" />
+        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/css/main.css?v=3" media="screen" />
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php get_category_feed_link('46'); ?>" />
         
         <?php include_once("analytics.php") ?>
