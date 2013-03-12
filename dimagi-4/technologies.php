@@ -26,7 +26,7 @@ get_header(); ?>
 	            </div>
 	        </div>
 	    </div>
-		<?php query_posts('cat=32,-38&meta_key=menu-order&orderby=meta_value&order=ASC'); while ( have_posts() ) { the_post(); ?>
+		<?php query_posts('section_name=Technologies'); while ( have_posts() ) { the_post(); ?>
 			<div class="span6">
 				<div class="well" style="height:100px;">
 		            <?php if (get_post_meta($post->ID,'thumb',true)) { ?>
