@@ -22,28 +22,39 @@ get_header(); ?>
 				    			</h2>
 				    		</article>
 			    		</div>
+			    		
+			    		
 			    		<div id="banner-commconnect" class="item">
 				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/commconnect.jpg">
 				    			<hgroup>
-				    				<h1 class="big pull-left" style="text-align: right;">CommConnect</h1>
-				    				<h2 class="pull-right orange" style="width: 300px; top: 90px;">A solution for two-way messaging conditional reminders, surveys and broadcast messages.</h2>
+				    				<h1 class="big pull-left" style="top: 36px;">CommConnect</h1>
+				    				<h2 class="pull-left blue" style="width: 410px; top: 114px;">
+				    				  A solution for two-way messaging conditional reminders, surveys and broadcast messages.
+				    				</h2>
 				    			</hgroup>
-				    			<h2 class="pull-left orange" style="top:28px; width:234px;">
-				    				<a href="http://www.dimagi.com/">Use on its own or integrate with CommCare. <span class="blue">Learn More.</span></a>
+				    			<h2 class="pull-left" style="left: 255px; top:184px; width:295px;">
+				    				<a class="orange" href="http://www.dimagi.com/">Use on its own or integrate with CommCare. <span>Learn More</span></a>
 				    			</h2>
 				    		</article>
 			    		</div>
-			    		<div id="banner-commconnect" class="item">
+			    		
+			    		<div id="banner-commtrack" class="item" data-link="#">
 				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/commtrack.jpg">
 				    			<hgroup>
-				    				<h1 class="big pull-right blue" style="text-align: right;">CommTrack</h1>
-				    				<h2 class="pull-right" style="width: 300px; top: 90px;">Stock tracking, requisition planning, and delivery acknowledgement for mobile workers. <a class="orange" href="http://www.dimagi.com/">Learn More</a></h2>
+				    				<h1 class="big pull-right blue" style="width: 343px; top: 57px; padding: 10px 27px; right: 0px;">CommTrack</h1>
+				    				<h2 class="pull-right" style="width: 330px; top: 150px;">
+				    				  Stock tracking, requisition planning, and delivery acknowledgement for mobile workers.
+				    				</h2>
+  				    			<p class="pull-right text-align-center" style="width:122px; top: 229px;">
+    				    			<a class="orange" href="#">Learn More</a>
+  				    			</p>
 				    			</hgroup>
-				    			<h2 class="pull-left orange" style="top:28px; width:234px;">
-				    				<a href="http://www.dimagi.com/">A tool for mobile logistics and supply chain management.</a>
+				    			<h2 class="pull-left" style="top: 221px; width: 310px;">
+				    				<a class="orange" href="#">A tool for mobile logistics and supply chain management.</a>
 				    			</h2>
 				    		</article>
 			    		</div>
+			    		
 			    		<div id="banner-hire" class="item">
 				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/brazil.jpg">
 				    			<hgroup>
@@ -55,6 +66,7 @@ get_header(); ?>
 				    			</h2>
 				    		</article>
 			    		</div>
+			    		
 			    		<div id="banner-bw" class="item">
 			    			<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/faces.jpg">
 			    				<hgroup>
@@ -114,7 +126,7 @@ get_header(); ?>
 			    <img src="<?php bloginfo('template_directory'); ?>/img/divider.png" width="960" height="33" alt="divider" />
 				<article class="row news">
 			    	<section class="span6">
-			    		<h1><a href="/category/blog/">TEST Staff Blog</a></h1>
+			    		<h1><a href="/category/blog/">Staff Blog</a></h1>
 			    		<?php query_posts('cat=39,-46&showposts=3'); if (have_posts()) : ?>
 			    		<!--<a href="/category/blog/feed/"><img src="<?php bloginfo('template_url'); ?>/images/feed-icon.png"></a>-->
 			    		<?php while (have_posts()) : the_post(); ?>
