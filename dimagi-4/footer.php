@@ -54,24 +54,32 @@
 		        		<address>
 		        			<section>
 			        			Dimagi, Inc.<br />
-								585 Massachusetts Ave<br />
-								Suite 3<br />
-								Cambridge, MA 02139<br />
-								t +1 617.649.2214<br />
-								f +1 617.274.8393<br />
+    								585 Massachusetts Ave<br />
+    								Suite 3<br />
+    								Cambridge, MA 02139<br />
+    								t +1 617.649.2214<br />
+    								f +1 617.274.8393<br />
 		        			</section>
 							
-							<section>
-								Dimagi India<br />
-								D - 1/28 Vasant Vihar<br />
-								New Delhi 110057<br />
-								+91 1146704670<br />
-							</section>
-							
-							<section>
-							&copy; <?php echo date('Y'); ?>, Dimagi, Inc.
-							</section>
+    							<section>
+    								Dimagi India<br />
+    								D - 1/28 Vasant Vihar<br />
+    								New Delhi 110057<br />
+    								+91 1146704670<br />
+    							</section>
+    							
+    							<section>
+    								Dimagi South Africa<br />
+    								56 Barnet Street<br />
+    								Gardens, Cape Town 8001<br />
+    								South Africa<br />
+    								+27 (0)21 823 9911<br />
+    							</section>
+    							
 		        		</address>
+		        		<section class="copyright">
+    							&copy; <?php echo date('Y'); ?>, Dimagi, Inc.
+    						</section>
         		</div>
         	</div>
         </footer>

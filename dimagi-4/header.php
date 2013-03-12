@@ -99,14 +99,12 @@
 			    	</ul>
 		        </nav>
 		    </header>
-<?php		    
-/*
+
 		    <aside class="announcement">
 		    	<div class="announcement-content">
-		    		<a href="http://www.commcarehq.org/div2/round1">Request for Applications</a><p>CommCare Proof of Concept in India. <small>40 organizations. Free phones. Free support.</small></p><a class="learn-more" href="http://www.commcarehq.org/div2/round1">Learn More</a>
+		    		<a href="http://www.commcarehq.org/poc/wfa">Request for Applications</a><p>CommCare Proof of Concept in French West Africa and Gambia. <small>Free phones and support.</small></p><a class="learn-more" href="http://www.commcarehq.org/poc/wfa">Learn More</a>
 		    	</div>
 		    </aside>
-*/
-?>
+
 		    
 		    <div class="content">

@@ -4313,7 +4313,7 @@ body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -350px;
+  margin: 0 auto -460px;
   /*
 &.adminbar:before {
 		top: 29px;
@@ -4351,7 +4351,7 @@ body {
   height: 0;
   clear: both;
   visibility: hidden;
-  height: 350px;
+  height: 460px;
 }
 header {
   width: 960px;
@@ -4541,8 +4541,8 @@ header nav > ul > li:hover > ul {
   color: #f58220;
 }
 footer {
-  height: 350px;
-  margin-top: -350px;
+  height: 460px;
+  margin-top: -460px;
   background-color: #413f3f;
   color: #ffffff;
 }
@@ -4600,12 +4600,14 @@ footer .social a:hover {
   -o-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }
-footer address {
+footer address,
+footer .copyright {
   text-align: right;
   font-size: 11px;
   color: #cccccc;
 }
-footer address > section {
+footer address > section,
+footer .copyright > section {
   margin-bottom: 10px;
 }
 #dimagiBanner {
@@ -4664,10 +4666,40 @@ footer address > section {
 .dimagi-carousel article p a.blue {
   color: #ffffff;
 }
+.dimagi-carousel article h1 a.orange span,
+.dimagi-carousel article h2 a.orange span,
+.dimagi-carousel article p a.orange span,
+.dimagi-carousel article h1 a.blue span,
+.dimagi-carousel article h2 a.blue span,
+.dimagi-carousel article p a.blue span {
+  display: inline-block;
+  padding: 0 .5em;
+  color: #003d71;
+  vertical-align: top;
+  margin-top: -1px;
+}
+.dimagi-carousel article h1 a.orange:hover span,
+.dimagi-carousel article h2 a.orange:hover span,
+.dimagi-carousel article p a.orange:hover span,
+.dimagi-carousel article h1 a.blue:hover span,
+.dimagi-carousel article h2 a.blue:hover span,
+.dimagi-carousel article p a.blue:hover span {
+  color: #ffffff;
+}
 .dimagi-carousel article h1 a:hover,
 .dimagi-carousel article h2 a:hover,
 .dimagi-carousel article p a:hover {
   text-decoration: none;
+}
+.dimagi-carousel article h1 a:hover.blue span,
+.dimagi-carousel article h2 a:hover.blue span,
+.dimagi-carousel article p a:hover.blue span {
+  background-color: #003d71;
+}
+.dimagi-carousel article h1 a:hover.orange span,
+.dimagi-carousel article h2 a:hover.orange span,
+.dimagi-carousel article p a:hover.orange span {
+  background-color: #f89406;
 }
 .dimagi-carousel article h1 {
   margin: 0;
@@ -4755,6 +4787,15 @@ footer address > section {
 #banner-commcare article > h2 a img {
   display: inline-block;
   margin-top: -3px;
+}
+#banner-commtrack hgroup > p {
+  position: absolute;
+  font-size: 18px;
+}
+#banner-commtrack hgroup > p a {
+  display: block;
+  text-align: center;
+  padding: 10px;
 }
 .dimagi-carousel-controls {
   float: right;
