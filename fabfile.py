@@ -7,10 +7,10 @@ from fabric.context_managers import cd
 
 env.code_repo = 'https://github.com/dimagi/wordpress-theme.git'
 env.code_branch = 'master'
-env.root = root = '/home/content/d/i/m/dimagi'
-env.hosts = ['dimagi.com']
+env.root = root = '/'
+env.hosts = ['wpengine.dimagi.com']
 env.user = 'dimagi'
-theme = posixpath.join(root, 'html/wp/wp-content/themes')
+theme = posixpath.join(root, 'wp-content/themes')
 
 @task
 def _setup_path():

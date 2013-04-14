@@ -19,7 +19,7 @@ get_header(); ?>
 						<p><?php echo category_description('46'); ?></p>
 					<?php } ?>
 			      </hgroup>
-			      <img src="http://www.dimagi.com/wp/wp-content/uploads/2010/01/post-it-arabic-300x168.jpg" alt="" title="" width="300" height="168" />
+			      <img src="http://www.dimagi.com/wp-content/uploads/2010/01/post-it-arabic-300x168.jpg" alt="" title="" width="300" height="168" />
 			  </div>
 			</div>
 		</div>
