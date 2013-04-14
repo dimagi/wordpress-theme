@@ -8,7 +8,7 @@ from fabric.context_managers import cd
 env.code_repo = 'https://github.com/dimagi/wordpress-theme.git'
 env.code_branch = 'master'
 env.root = root = '/'
-env.hosts = ['wpengine.dimagi.com']
+env.hosts = ['dimagi.wpengine.com']
 env.user = 'dimagi'
 theme = posixpath.join(root, 'wp-content/themes')
 
