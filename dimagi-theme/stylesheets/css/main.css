@@ -1,3 +1,8 @@
+/*
+  sorry this is such a maintenance nightmare. 
+  It's not like there was a lot of time to work on the website and organize, so I just slapped stuff together.
+  I mean...it's a wordpress theme.
+*/
 /**
 Variables for Dimagi.com
 **/
@@ -4368,7 +4373,7 @@ header h1 {
   height: 69px;
   z-index: 1001;
 }
-header nav > ul {
+.nav-dimagi {
   list-style: none;
   padding: 0;
   position: absolute;
@@ -4376,13 +4381,13 @@ header nav > ul {
   right: 0;
   font-weight: 500;
 }
-header nav > ul > li {
+.nav-dimagi > li {
   display: block;
   position: relative;
   float: left;
   padding: 13px 5px 0px 0px;
 }
-header nav > ul > li > a {
+.nav-dimagi > li > a {
   display: block;
   padding: .5em 1em;
   z-index: 1001;
@@ -4394,7 +4399,7 @@ header nav > ul > li > a {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-header nav > ul > li:hover > a {
+.nav-dimagi > li:hover > a {
   text-decoration: none;
   -webkit-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.35);
@@ -4414,7 +4419,7 @@ header nav > ul > li:hover > a {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-header nav > ul > li ul {
+.nav-dimagi > li ul {
   list-style: none;
   padding: .5em 0;
   margin: 0;
@@ -4446,7 +4451,7 @@ header nav > ul > li ul {
   -o-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
 }
-header nav > ul > li ul > li > a {
+.nav-dimagi > li ul > li > a {
   width: 140px;
   padding: .5em 1em;
   color: #ffffff;
@@ -4456,16 +4461,29 @@ header nav > ul > li ul > li > a {
   -o-transition: background 0.1s ease-in-out;
   transition: background 0.1s ease-in-out;
 }
-header nav > ul > li ul > li > a:hover {
+.nav-dimagi > li ul > li > a:hover {
   color: #003d71;
   background-color: #ffffff;
   text-decoration: none;
 }
-header nav > ul > li:hover > ul {
+.nav-dimagi > li:hover > ul {
   opacity: 1;
   position: absolute;
   top: 99%;
   left: 0;
+}
+.nav-dimagi .nav-header {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: .8em;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+.nav-dimagi .nav-header span {
+  background-color: #f58220;
+  display: inline-block;
+  border-radius: 2px;
+  padding: 0 .4em;
 }
 .announcement {
   width: 100%;
