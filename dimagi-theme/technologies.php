@@ -17,6 +17,9 @@ get_header(); ?>
 	<?php endwhile; endif; ?>
 
 	<section class="row">
+	  <div class="span12">
+	     <h2>Products</h2>
+	  </div>
 		<div class="span6">
 			<div class="well" style="height:100px;">
 	            <a href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/misc/technologies_commcare_thumb.png" alt="CommCare icon" /></a>
@@ -26,6 +29,22 @@ get_header(); ?>
 	            </div>
 	        </div>
 	    </div>
+	  <?php query_posts('cat=102&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); while ( have_posts() ) { the_post(); ?>
+			<div class="span6">
+				<div class="well" style="height:100px;">
+		            <?php if (get_post_meta($post->ID,'thumb',true)) { ?>
+					<a href="<?php the_permalink(); ?>"><img src="<?php echo get_post_meta($post->ID,'thumb',true); ?>" /></a>
+		            <?php } ?>
+		            <div class="pull-right span4 desaturate-links" style="width: 296px;">
+			            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			            <p><a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a></p>
+		            </div>
+		        </div>
+		    </div>
+		<?php } ?>
+		<div class="span12">
+		  <h2>Technologies</h2>
+		</div>
 		<?php query_posts('cat=32,-38&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); while ( have_posts() ) { the_post(); ?>
 			<div class="span6">
 				<div class="well" style="height:100px;">

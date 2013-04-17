@@ -19,7 +19,7 @@
 
         <link rel="shortcut icon" href="http://www.dimagi.com/favicon.png" type="image/x-icon" />
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli" />
-        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/css/main.css?v=3" media="screen" />
+        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/css/main.css?v=3.1" media="screen" />
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php get_category_feed_link('46'); ?>" />
         
         <?php include_once("analytics.php") ?>
@@ -55,15 +55,22 @@
 		    <header>
 		    	<h1><a href="http://www.dimagi.com/"><img src="<?php bloginfo('template_directory'); ?>/img/dimagi-logo.png" width="150" height="69" alt="Dimagi" /></a></h1>
 		        <nav>
-			    	<ul>
+			    	<ul class="nav-dimagi">
 			    		<li>
 			    			<a href="<?php echo get_permalink('3015'); ?>"><?php $cat=get_category('32'); echo $cat->name; ?></a>
-			    			<?php $wp_query_technologies = new WP_Query('cat=32,-38&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); ?>
+			    			<?php
+			    			  $wp_query_products = new WP_Query('cat=102&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); 
+			    			  $wp_query_technologies = new WP_Query('cat=32,-38&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); ?>
 			    			<ul>
+			    			  <li class="nav-header"><span>Products</span></li>
 			    				<li><a href="http://www.commcarehq.org/">CommCare HQ</a></li>
+			    				<?php while($wp_query_products->have_posts()) { $wp_query_products->the_post(); ?>
+							        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+						      <?php } ?>
+						      <li class="nav-header"><span>Technologies</span></li>
 			    				<?php while($wp_query_technologies->have_posts()) { $wp_query_technologies->the_post(); ?>
 							        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-						        <?php } ?>
+						      <?php } ?>
 			    			</ul>
 			    		</li>
 			    		<li>
@@ -100,11 +107,13 @@
 		        </nav>
 		    </header>
 
-		    <aside class="announcement">
+		   <!--
+ <aside class="announcement">
 		    	<div class="announcement-content">
 		    		<a href="http://www.commcarehq.org/poc/wfa">Request for Applications</a><p>CommCare Proof of Concept in French West Africa and Gambia. <small>Free phones and support.</small></p><a class="learn-more" href="http://www.commcarehq.org/poc/wfa">Learn More</a>
 		    	</div>
 		    </aside>
+-->
 
 		    
 		    <div class="content">
