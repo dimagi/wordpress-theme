@@ -19,8 +19,8 @@
     							<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
     							<?php } ?>
 	        			</ul>
-	        			<?php query_posts('cat=32,-38&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); ?>
-	        			<h1><a href="<?php echo get_permalink('3015'); ?>"><?php echo get_cat_name('32'); ?></a></h1>
+	        			<?php query_posts('cat=112&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); ?>
+	        			<h1><a href="<?php echo get_permalink('3015'); ?>"><?php echo get_cat_name('112'); ?></a></h1>
 	        			<ul>
     							<?php while(have_posts()) { the_post(); ?>
     							<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>

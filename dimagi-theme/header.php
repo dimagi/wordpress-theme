@@ -60,14 +60,14 @@
 			    			<a href="<?php echo get_permalink('3015'); ?>"><?php $cat=get_category('32'); echo $cat->name; ?></a>
 			    			<?php
 			    			  $wp_query_products = new WP_Query('cat=102&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); 
-			    			  $wp_query_technologies = new WP_Query('cat=32,-38&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); ?>
+			    			  $wp_query_technologies = new WP_Query('cat=112&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); ?>
 			    			<ul>
-			    			  <li class="nav-header"><span>Products</span></li>
+			    			  <li class="nav-header"><span><?php echo get_cat_name('102'); ?></span></li>
 			    				<li><a href="http://www.commcarehq.org/">CommCare HQ</a></li>
 			    				<?php while($wp_query_products->have_posts()) { $wp_query_products->the_post(); ?>
 							        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 						      <?php } ?>
-						      <li class="nav-header"><span>Technologies</span></li>
+						      <li class="nav-header"><span><?php echo get_cat_name('102'); ?></span></li>
 			    				<?php while($wp_query_technologies->have_posts()) { $wp_query_technologies->the_post(); ?>
 							        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 						      <?php } ?>
