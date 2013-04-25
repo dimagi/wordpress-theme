@@ -12,7 +12,7 @@ get_header(); ?>
 				<div id="dimagiBanner" class="carousel slide dimagi-carousel">
 		    		<div class="carousel-inner">
 			    		<div id="banner-commcare" class="active item">
-				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/commcare.jpg">
+				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/commcare.jpg" data-link="http://www.commcarehq.org/">
 				    			<hgroup>
 				    				<h1 class="orange tall pull-right quarter">Sign Up Today for CommCare</h1>
 				    				<h2 class="quarter pull-right" style="top: 130px;"><a class="blue" href="http://www.commcarehq.org/">The leading case management solution for global health.</a></h2>
@@ -24,8 +24,8 @@ get_header(); ?>
 			    		</div>
 			    		
 			    		
-			    		<div id="banner-commconnect" class="item" data-link="http://www.dimagi.com/commconnect/">
-				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/commconnect.jpg">
+			    		<div id="banner-commconnect" class="item">
+				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/commconnect.jpg" data-link="http://www.dimagi.com/commconnect/">
 				    			<hgroup>
 				    				<h1 class="big pull-left" style="top: 36px;">CommConnect</h1>
 				    				<h2 class="pull-left blue" style="width: 410px; top: 114px;">
@@ -38,8 +38,8 @@ get_header(); ?>
 				    		</article>
 			    		</div>
 			    		
-			    		<div id="banner-commtrack" class="item" data-link="http://www.dimagi.com/commtrack/">
-				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/commtrack.jpg">
+			    		<div id="banner-commtrack" class="item">
+				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/commtrack.jpg" data-link="http://www.dimagi.com/commtrack/">
 				    			<hgroup>
 				    				<h1 class="big pull-right blue" style="width: 343px; top: 57px; padding: 10px 27px; right: 0px;">CommTrack</h1>
 				    				<h2 class="pull-right" style="width: 330px; top: 150px;">
@@ -56,7 +56,7 @@ get_header(); ?>
 			    		</div>
 			    		
 			    		<div id="banner-hire" class="item">
-				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/brazil.jpg">
+				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/brazil.jpg" data-link="http://www.dimagi.com/about/careers/">
 				    			<hgroup>
 				    				<h1 class="big pull-right" style="text-align: right;">We're Hiring</h1>
 				    				<h2 class="pull-right" style="width: 300px; top: 90px;"><a class="orange" href="http://www.dimagi.com/about/careers/">Currently looking for software engineers to join our team.</a></h2>
@@ -68,7 +68,7 @@ get_header(); ?>
 			    		</div>
 			    		
 			    		<div id="banner-bw" class="item">
-			    			<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/faces.jpg">
+			    			<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/faces.jpg" data-link="http://www.businessweek.com/smallbiz/content/jun2011/sb20110621_158462.htm">
 			    				<hgroup>
 			    					<h1 class="orange pull-left third" style="height:153px;">Business Week's Top 25 Social Enterprises</h1>
 			    					<h2 class="pull-left" style="left: 30px; top: 125px; width:364px;"><a class="blue" href="http://www.businessweek.com/smallbiz/content/jun2011/sb20110621_158462.htm">A certified BCorp, we take pride in the recognition of making social change.</a></h2>
@@ -76,7 +76,7 @@ get_header(); ?>
 			    			</article>
 			    		</div>
 			    		<div id="banner-sa" class="item">
-				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/cape_town.jpg" data-link="#">
+				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/cape_town.jpg" data-link="http://www.dimagi.com/about/careers/">
 				    			<hgroup>
 				    				<h1 class="big pull-left">Dimagi in South Africa</h1>
 				    				<h2 class="pull-left" style="top:90px; left:43px; width:280px;"><a class="orange" href="http://www.dimagi.com/about/careers/">We've opened a new project office in Cape Town.</a></h2>
@@ -84,7 +84,7 @@ get_header(); ?>
 				    		</article>
 			    		</div>
 			    		<div id="banner-india" class="item">
-				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/asha.jpg" data-link="#">
+				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/asha.jpg" data-link="http://www.dimagi.com/an-asha-calls-me-and-tells-me-stories-of-change/">
 				    			<hgroup>
 				    				<h1 class="big pull-right">Dimagi in India</h1>
 				    				<h2 class="pull-right quarter" style="top:90px; width: 275px;">

@@ -91,7 +91,7 @@
         	</div>
         </footer>
         <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="<?php bloginfo('template_directory'); ?>/js/dimagi.landing.js" type="text/javascript"></script>
+        <script src="<?php bloginfo('template_directory'); ?>/js/dimagi.landing.js?v=2.1" type="text/javascript"></script>
         <script type="text/javascript">
         	var bannerImages = new DimagiAsyncImages({
 	        	container: '#dimagiBanner'

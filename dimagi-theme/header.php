@@ -67,7 +67,7 @@
 			    				<?php while($wp_query_products->have_posts()) { $wp_query_products->the_post(); ?>
 							        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 						      <?php } ?>
-						      <li class="nav-header"><span><?php echo get_cat_name('102'); ?></span></li>
+						      <li class="nav-header"><span><?php echo get_cat_name('112'); ?></span></li>
 			    				<?php while($wp_query_technologies->have_posts()) { $wp_query_technologies->the_post(); ?>
 							        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 						      <?php } ?>

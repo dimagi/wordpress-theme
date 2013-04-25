@@ -61,7 +61,7 @@ var DimagiBannerControl = function (options) {
 				return false;
 			});
 			self.banner.find('article').click(function () {
-				window.location=$(this).find('hgroup h2 a').attr('href');
+				window.location=$(this).data('link');
 			});
 		});
 	};
