@@ -18,9 +18,9 @@ get_header(); ?>
 	     <h2><?php echo get_cat_name('102'); ?></h2>
 	  </div>
 		<div class="span6">
-			<div class="well" style="height:100px;">
-	            <a href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/misc/technologies_commcare_thumb.png" alt="CommCare icon" /></a>
-	            <div class="pull-right span4 desaturate-links" style="width: 296px;">
+			<div class="well" style="height:132px;">
+	            <a href="<?php the_permalink(); ?>" class="inline-middle"><img src="<?php bloginfo('template_directory'); ?>/img/misc/technologies_commcare_thumb.png" alt="CommCare icon" /></a>
+	            <div class="inline-middle span4 desaturate-links" style="width: 296px;">
 		            <h2><a href="http://www.commcarehq.org/">CommCare</a></h2>
 		            <p><a href="http://www.commcarehq.org/">CommCare is an easily customizable mobile platform for frontline workers to track and support their interactions with clients.</a></p>
 	            </div>
@@ -28,32 +28,32 @@ get_header(); ?>
 	    </div>
 	  <?php query_posts('cat=102&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); while ( have_posts() ) { the_post(); ?>
 			<div class="span6">
-				<div class="well" style="height:100px;">
-		            <?php if (get_post_meta($post->ID, 'thumb', true)) { ?>
-					<a href="<?php the_permalink(); ?>"><img src="<?php echo get_post_meta($post->ID,'thumb',true); ?>" /></a>
-		            <?php } ?>
-		            <div class="pull-right span4 desaturate-links" style="width: 296px;">
-			            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-			            <p><a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a></p>
-		            </div>
-		        </div>
-		    </div>
+				<div class="well" style="height:132px;">
+            <?php if (get_post_meta($post->ID, 'thumb', true)) { ?>
+            <a href="<?php the_permalink(); ?>" class="inline-middle"><img src="<?php echo get_post_meta($post->ID,'thumb',true); ?>" /></a>
+            <?php } ?>
+            <div class="desaturate-links span4 inline-middle" style="width: 296px;">
+              <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+              <p><a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a></p>
+            </div>
+	        </div>
+	    </div>
 		<?php } ?>
 		<div class="span12">
 		  <h2><?php echo get_cat_name('112'); ?></h2>
 		</div>
 		<?php query_posts('cat=112&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); while ( have_posts() ) { the_post(); ?>
 			<div class="span6">
-				<div class="well" style="height:100px;">
-		            <?php if (get_post_meta($post->ID,'thumb',true)) { ?>
-					<a href="<?php the_permalink(); ?>"><img src="<?php echo get_post_meta($post->ID,'thumb',true); ?>" /></a>
-		            <?php } ?>
-		            <div class="pull-right span4 desaturate-links" style="width: 296px;">
-			            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-			            <p><a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a></p>
-		            </div>
-		        </div>
-		    </div>
+				<div class="well" style="height:132px;">
+            <?php if (get_post_meta($post->ID,'thumb',true)) { ?>
+            <a href="<?php the_permalink(); ?>" class="inline-middle"><img src="<?php echo get_post_meta($post->ID,'thumb',true); ?>" /></a>
+            <?php } ?>
+            <div class="desaturate-links span4 inline-middle" style="width: 296px;">
+	            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+	            <p><a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a></p>
+            </div>
+	        </div>
+	    </div>
 		<?php } ?>
 	</section>
 </article>
