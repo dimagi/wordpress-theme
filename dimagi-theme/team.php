@@ -38,6 +38,10 @@ get_header(); ?>
 			foreach( $staffList as $ind=>$staff ) { ?>
 			<div class="span6">
 				<div class="well">
+				    <hgroup>
+				      <h2><?= $staff->post_title; ?></h2>
+				      <h3><?= $staff->_subheading; ?></h3>
+				    </hgroup>
 			    	<?=$staff->post_content; ?>
 		        </div>
 		    </div>
