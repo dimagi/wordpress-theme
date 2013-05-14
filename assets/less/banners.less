@@ -1,0 +1,203 @@
+#dimagiBanner {
+	.box-shadow(0 0 5px rgba(0,0,0,.35));
+	width: @documentWidth;
+	height: @documentWidth/3;
+	margin: 0;
+	background-color: @dimagiBlue;
+}
+
+.dimagi-carousel {
+	article {
+		position: relative;
+		width: @documentWidth;
+		height: @documentWidth/3;
+		cursor: pointer;
+		
+		> img {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: @zindexBannerImage;
+		}
+			
+		@bannerHeadPadding: @colSpace*3;
+		@bannerSubPadding: @colSpace*1.5;
+		
+		hgroup {
+			color: @white;
+			z-index: @zindexBannerText;
+			position: absolute;
+			width: @documentWidth;
+			height: @documentWidth/3;
+			top: 0;
+			left: 0;
+			.animation-background-fade(.4s);
+			&:hover {
+				background-color: rgba(0,0,0, .15);
+			}
+		}
+			
+		.pull-right {
+			float: none;
+			top: (@gridSpace*2)/2;
+			right: @gridSpace*2;
+		}
+		.pull-left {
+			float: none;
+			top: (@gridSpace*2)/2;
+			left: @gridSpace*2;
+		}
+		
+		h1 a, h2 a, p a {
+			&.orange, &.blue, {	
+				color: @white;
+				span {
+				  display: inline-block;
+				  padding: 0 .5em;
+  				color: @linkColor;
+  				vertical-align: top;
+  				margin-top: -1px;
+				}
+				&:hover span {
+  				color: @white;
+				}
+			}
+			&:hover {
+				text-decoration: none;
+				&.blue span {
+  				background-color: @linkColor;
+				}
+				&.orange span {
+  				background-color: @orange;
+				}
+			}
+		}	
+		
+		h1 {
+			margin: 0;
+			position: absolute;
+			font-size: @baseFontSize*2.2;
+			line-height: @baseLineHeight*2.2;
+			
+			&.quarter {
+				width: @documentWidth/3 - @bannerHeadPadding*3;
+			}
+			&.third {
+				width: @documentWidth/2 - (@bannerHeadPadding*4)+2;
+			}
+			&.pull-right.orange {
+				right: 0;
+			}
+			&.pull-left.orange {
+				left: 0;
+			}
+			&.orange { top: 0; }
+			&.orange, .orange{
+				padding: @bannerHeadPadding @bannerHeadPadding+1;
+			}
+			&.big {
+				font-size: 50px;
+				line-height: 54px;
+			}
+			z-index: @zindexBannerText+1;
+		}
+		
+		h2 {
+			font-size: 16px;
+			line-height: 22px;
+			position: absolute;
+			z-index: @zindexBannerText+2;
+			
+			&.quarter {
+				width: @documentWidth/3 - @bannerSubPadding;
+			}
+			&.blue,
+			.blue, 
+			&.orange,
+			.orange {
+				display: block;
+				padding: @bannerSubPadding/2 @bannerSubPadding;
+			}
+		}
+	}
+}
+
+.dimagi-carousel{
+	.orange {
+		background-color: @dimagiOrange;
+		.animation-background-fade(.4s);
+	}
+	hgroup:hover .orange, .orange:hover {
+		background-color: @dimagiBlue;
+	}
+}
+
+.dimagi-carousel {
+	.blue {
+		background-color: @dimagiBlue;
+		.animation-background-fade(.4s);
+	}
+	hgroup:hover .blue, .blue:hover {
+		background-color: @dimagiOrange;
+	}
+}
+
+.dimagi-carousel .tall {
+	height: 100%;
+}
+
+#banner-commcare article hgroup > h1 {
+	width: 241px;
+	padding-right: @gridSpace;
+}
+
+#banner-commcare article > h2 {	
+	a {
+		color: @dimagiBlue;
+		cursor: pointer;
+		border: 1px solid transparent;
+		&.orange:hover {
+			cursor: pointer;
+			background-color: @dimagiOrange;
+			border: 1px solid @dimagiBlue;
+		}
+		img {
+			display: inline-block;
+			margin-top: -3px;
+		}
+	}
+}
+
+#banner-commtrack hgroup > p {
+  position: absolute;
+  font-size: 18px;
+  a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+.dimagi-carousel-controls{
+	float: right;
+	
+	.carousel-control {
+		width:6px;
+		height: 6px;
+		display: inline-block;
+		vertical-align: middle;
+		position: static;
+		margin: 1px 2px;
+		border: 1px solid @grayDarker;
+		.animation-background-fade(.2s);
+		.opacity(30);
+		&:hover {	
+			.opacity(90);
+		}
+		&.on {
+			background-color: transparent;
+		}
+	}
+}
+
