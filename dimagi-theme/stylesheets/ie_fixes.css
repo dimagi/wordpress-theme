@@ -1,0 +1,29 @@
+/**
+Variables for Dimagi.com
+**/
+header:before {
+  content: " ";
+  display: inline;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent !important;
+}
+#banner-commcare hgroup h2 {
+  width: 300px;
+}
+#banner-commcare h2 {
+  width: 165px;
+}
+#content-wrap:before {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e6e6e6;
+}
+.ie-clear-footer {
+  clear: both;
+  height: 350px;
+}
+header {
+  z-index: 5000;
+}
