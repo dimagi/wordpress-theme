@@ -6,9 +6,6 @@ Variables for Dimagi.com
 @dimagiOrange: #f58220;
 @dimagiGray: #413f3f;
 
-@orange: @dimagiOrange;
-@blue: @dimagiBlue;
-
 @documentWidth: 960px;
 @colSpace: 10px;
 @colWidth: 60px;
@@ -23,3 +20,16 @@ Variables for Dimagi.com
 @backgroundColor: #FAF7F5;
 
 @navRadius: 5px;
+
+@zindexHeader:			  -1;
+@zindexBannerText: 		  500;
+@zindexBannerImage:		  490;
+
+/* Overrides */
+
+@orange: @dimagiOrange;
+@blue: lighten(@dimagiBlue,30);
+@blueDark: @dimagiBlue;
+
+@btnPrimaryBackground: spin(lighten(@dimagiBlue, 10), 2%);
+@btnPrimaryBackgroundHighlight: @dimagiBlue;
