@@ -1,8 +1,4 @@
 <?php
-/**
- * @package WordPress
- * @subpackage Default_Theme
- */
 /*
 Template Name: Technologies
 */
@@ -33,7 +29,7 @@ get_header(); ?>
 	  <?php query_posts('cat=102&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); while ( have_posts() ) { the_post(); ?>
 			<div class="span6">
 				<div class="well" style="height:100px;">
-		            <?php if (get_post_meta($post->ID,'thumb',true)) { ?>
+		            <?php if (get_post_meta($post->ID, 'thumb', true)) { ?>
 					<a href="<?php the_permalink(); ?>"><img src="<?php echo get_post_meta($post->ID,'thumb',true); ?>" /></a>
 		            <?php } ?>
 		            <div class="pull-right span4 desaturate-links" style="width: 296px;">
