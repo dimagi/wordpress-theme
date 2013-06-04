@@ -3,55 +3,69 @@
  * @package Dimagi
  * @subpackage Dimagi_4
  */
- 
+ // todo make this page even less NASTY x_x
+?>
+<?php
+$page_aside = get_post_meta($post->ID, 'page_aside', true);
+$post_slug = $post->post_name;
+$source_url = get_post_meta($post->ID,'source-code-url',true);
+$demo_url = get_post_meta($post->ID,'demo-url',true);
+
+$special_categories = array(
+  70 => '32',  // post ID => category to show
+  10 => '28',
+  72 => '34',
+  527 => '35'
+);
+
+$staff_post_cat = '39';
 ?>
 
-<aside class="span4 pull-right" style="margin-right: 10px;">
+<aside class="span4">
+  
+  <?php if ($page_aside): ?>
+  <?= $page_aside ?>
+  <?php endif; ?>
+  
+  <?php if ($source_url || $demo_url): ?>
+  <div class="well">
+    <p>
+      <?php if ($source_url) : ?>
+      <a class="btn btn-primary btn-large" href="<?= $source_url ?>">Source Code</a>
+      <?php endif; ?>
+      <?php if ($demo_url) : ?>
+      <a class="btn btn-primary btn-large" href="<?= $demo_url ?>">Demo</a>
+      <?php endif; ?>
+    </p>
+  </div>
+  <?php endif; ?>
 
-	<?php $post_slug = $post->post_name; ?>
-	<p>
-	<?php if (get_post_meta($post->ID,'source-code-url',true)) { ?>
-	    <a class="btn btn-primary btn-large" href="<?php echo get_post_meta($post->ID,'source-code-url',true); ?>">Source Code</a>
-	<?php } ?>
-	
-	<?php if (get_post_meta($post->ID,'demo-url',true)) { ?>
-	    <a class="btn btn-primary btn-large" href="<?php echo get_post_meta($post->ID,'demo-url',true); ?>">Demo</a>
-	<?php } ?>
-	</p>
 
-
-
-
-	<?php if ($post->ID == 70 || $post->ID == 10 || $post->ID == 72 || $post->ID == 527) { // If this is a "page" ?>
-	
-		<?php if ($post->ID == 70) $query_cat = 32;
-		elseif ($post->ID == 10) $query_cat = 28;
-		elseif ($post->ID == 72) $query_cat = 34;
-		elseif ($post->ID == 527) $query_cat = 35;
-		?>
+	<?php if (array_key_exists($post->ID, $special_categories)) : ?>
 		<nav class="well" style="padding: 8px 0px;">
 			<ul class="nav nav-list">
-				<?php query_posts('cat='.$query_cat.'&showposts=-1'); if (have_posts()) : ?>
+				<?php query_posts('cat='.$special_categories[$post->ID].'&showposts=-1'); if (have_posts()) : ?>
 				<li class="nav-header">Our <?php the_title(); ?></li>
 				<?php while (have_posts()) { the_post(); ?>
 				<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 				<?php } endif; ?>
 			</ul>
 		</nav>
-	<? } ?>
-	<?php if (in_category('39') /* && is_single() */ && !is_page() ) { // If this is a staff blog post ?>
+	<? endif; ?>
+	
+	<?php if (in_category($staff_post_cat) && !is_page() ) :  // staff blog post ?>
 		<nav class="well" style="padding: 8px 0px;">
 			<ul class="nav nav-list">
 				<li class="nav-header">Feeds</li>
 				<li><a href="/category/blog/news/feed">News Feed</a></li>
 				<li><a href="/category/blog/feed">Full Blog Feed</a></li>
 				<li class="nav-header">Categories</li>
-				<?php wp_list_categories('child_of=39&hide_empty=0&title_li=&depth=1'); ?>
+				<?php wp_list_categories('child_of='.$staff_post_cat.'&hide_empty=0&title_li=&depth=1'); ?>
 				<li class="nav-header">Archives</li>
 				<?php wp_get_archives(); ?>
 			</ul>
 		</nav>
-	<?php } ?>
+	<?php endif; ?>
 		
 	
 	<?php if (is_single()) { // If this is a single post ?>
@@ -120,25 +134,25 @@
 	} ?>
 	
 	
-	<?php if (!in_category('39')) :
+	<?php if (!in_category($staff_post_cat)) :
 	/* As long as it's not a blog post, get related staff blog posts */ ?>
-	
-	<?php $wp_query_technologies = new WP_Query('tag='.$post_slug.'&cat=39,46&showposts=5'); if ($wp_query_technologies->have_posts()) : ?>
-	<nav class="well" style="padding: 8px 0px;">
-		<ul class="nav nav-list">
-			<li class="nav-header">Updates from the Blog</li>
-			<?php while($wp_query_technologies->have_posts()) : $wp_query_technologies->the_post(); ?>
-			<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?><small<?php the_date(); ?></small></a></li>
-			<?php endwhile; ?>
-		</ul>	
-	</nav>	
-	<?php endif; ?>
-	
+  	<?php 
+  	$wp_query_technologies = new WP_Query('tag='.$post_slug.'&cat='.$staff_post_cat.',46&showposts=5'); 
+  	if ($wp_query_technologies->have_posts()) : ?>
+    	<nav class="well" style="padding: 8px 0px;">
+    		<ul class="nav nav-list">
+    			<li class="nav-header">Updates from the Blog</li>
+    			<?php while($wp_query_technologies->have_posts()) : $wp_query_technologies->the_post(); ?>
+    			<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?><small<?php the_date(); ?></small></a></li>
+    			<?php endwhile; ?>
+    		</ul>	
+    	</nav>	
+  	<?php endif; ?>	
 	<?php endif; ?>
 	
 	
 	<?php } // End is_single() condition ?>
 
 
-</aside><!-- sidebar -->
+</aside>
 

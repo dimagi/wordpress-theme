@@ -1,0 +1,17 @@
+.hero-unit {
+	.box-shadow(0 1px 4px rgba(0, 0, 0, 0.20));
+	background-color: @dimagiGray;
+	#gradient > .vertical(lighten(@headerBackgroundColor, 2), @headerBackgroundColor);
+}
+
+.hero-page {
+  padding: @gridGutterWidth*2;
+  hgroup {
+    width: 525px;
+    margin-left: @gridGutterWidth;
+    &:first-child {
+      width: auto;
+      margin-left: 0;
+    }
+  }
+}

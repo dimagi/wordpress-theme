@@ -7,49 +7,53 @@
 
 			</div><!-- content --> 
     	</div><!-- wrapper -->
+    	
+  <?php
+  // todo massive cleanup needed
+  $wp_query_products = new WP_Query('cat=102&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); 
+  $wp_query_frameworks = new WP_Query('cat=112&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); 
+  $wp_query_services = new WP_Query('cat=34,-38&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC');
+  $wp_query_sectors = new WP_Query('cat=35,-38&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC');
+  $wp_query_case_studies = new WP_Query('cat=28,-38&showposts=-1'); 
+  ?>
         <footer>
         	<div class="content">
         		<section class="row">
 	        		<nav class="span2">
-	        		  <?php query_posts('cat=102&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); ?>
 	        			<h1><a href="<?php echo get_permalink('3015'); ?>"><?php echo get_cat_name('102'); ?></a></h1>
 	        			<ul>
 	        				<li><a href="http://www.commcarehq.org/">CommCare</a></li>
-    							<?php while(have_posts()) { the_post(); ?>
+    							<?php while($wp_query_products->have_posts()) { $wp_query_products->the_post(); ?>
     							<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
     							<?php } ?>
 	        			</ul>
-	        			<?php query_posts('cat=112&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); ?>
 	        			<h1><a href="<?php echo get_permalink('3015'); ?>"><?php echo get_cat_name('112'); ?></a></h1>
 	        			<ul>
-    							<?php while(have_posts()) { the_post(); ?>
+    							<?php while($wp_query_frameworks->have_posts()) { $wp_query_frameworks->the_post(); ?>
     							<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
     							<?php } ?>
 	        			</ul>
 	        		</nav>
 	        		<nav class="span2">
-	        			<?php query_posts('cat=34,-38&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); ?>
 	        			<h1><a href="<?php echo get_permalink('72'); ?>"><?php echo get_cat_name('34'); ?></a></h1>
 	        			<ul>
-	        				<?php while(have_posts()) { the_post(); ?>
+	        				<?php while($wp_query_services->have_posts()) { $wp_query_services->the_post(); ?>
 							<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 							<?php } ?>
 	        			</ul>
 	        		</nav>
 	        		<nav class="span2">
-	        			<?php query_posts('cat=35,-38&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); ?>
 	        			<h1><a href="<?php echo get_permalink('527'); ?>"><?php echo get_cat_name('35'); ?></a></h1>
 	        			<ul>
-	        				<?php while(have_posts()) { the_post(); ?>
+	        				<?php while($wp_query_sectors->have_posts()) { $wp_query_sectors->the_post(); ?>
 							<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 							<?php } ?>
 	        			</ul>
 	        		</nav>
 	        		<nav class="span4">
-	        			<?php query_posts('cat=28,-38&showposts=-1'); ?>
 	        			<h1><a href="<?php echo get_permalink('10'); ?>"><?php echo get_cat_name('28'); ?></a></h1>
 	        			<ul>
-	        				<?php while(have_posts()) { the_post(); ?>
+	        				<?php while($wp_query_case_studies->have_posts()) { $wp_query_case_studies->the_post(); ?>
 							<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 							<?php } ?>
 	        			</ul>

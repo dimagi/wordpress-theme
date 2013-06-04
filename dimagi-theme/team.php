@@ -7,14 +7,33 @@
 Template Name: Team
 */
 
-get_header(); ?>
+get_header(); 
+the_post(); 
+
+$page_id = $post->ID;
+
+$header_subhead = get_post_meta($page_id, 'page_subhead_text', true);
+$header_lead = get_post_meta($page_id, 'page_lead_text', true);
+
+$header_title = (!$post->_subheading) ? $post->post_title : $post->_subheading;
+?> 
 <article>
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	<div class="row" id="post-<?php the_ID(); ?>">
+  <div class="row">
+    <div class="span12">
+      <div class="hero-unit hero-page">
+        <div class="inline-middle"><iframe style="border-style: none; width: 320px; height: 220px;" src="http://whereis.dimagi.com/mapwidget/" width="120" height="20"></iframe></div>
+        <hgroup class="inline-middle" style="width:510px;">
+          <h1><?= $header_title ?></h1>
+          <?php if ($header_subhead): ?><h2><?= $header_subhead ?></h2><?php endif; ?>
+          <?php if ($header_lead): ?><p><?= $header_lead ?></p><?php endif; ?>
+        </hgroup>
+      </div>
+    </div>
+  </div>
+  <div id="post-<?= $page_id ?>" class="row">
 		<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
 		<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 	</div>
-	<?php endwhile; endif; ?>
 	
 	<nav class="subnav">
 		<ul class="nav nav-pills">
@@ -38,14 +57,22 @@ get_header(); ?>
 			foreach( $staffList as $ind=>$staff ) { ?>
 			<div class="span6">
 				<div class="well">
+				  <div class="team-blurb">
 				    <hgroup>
 				      <h2><?= $staff->post_title; ?></h2>
-				      <h3><?= $staff->_subheading; ?></h3>
+				      <h4><?= $staff->_subheading; ?></h4>
 				    </hgroup>
-			    	<?=$staff->post_content; ?>
-		        </div>
-		    </div>
-		    <?php if (($ind+1) % 2 == 0) { ?>
+				    <?php 
+				    $staff_photo = get_post_meta($staff->ID, 'staff_photo', true);
+				    if ($staff_photo) : ?>
+				    <div class="staff-image pull-left"><img src="<?= $staff_photo; ?>" alt="<?= $staff->post_title; ?>" /></div>
+				    <?php endif; ?>
+				    <?=$staff->post_content; ?>
+				  </div>
+			    <a class="team-more" href="<?= get_permalink($staff->ID); ?>"> More about <?=$staff->post_title?>...</a>
+        </div>
+	    </div>
+	    <?php if (($ind+1) % 2 == 0) { ?>
 		</div>
 		<div class="row">
 		    <?php } ?>

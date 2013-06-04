@@ -6633,6 +6633,59 @@ Variables for Dimagi.com
     border-radius: 0;
   }
 }
+.well {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: #F7F3F2;
+}
+.well:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.well .form-actions {
+  background-color: #cccccc;
+}
+.hero-unit {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: #413f3f;
+  background-color: #f3f1f1;
+  background-image: -moz-linear-gradient(top, #f5f3f3, #f0eeee);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f3f3), to(#f0eeee));
+  background-image: -webkit-linear-gradient(top, #f5f3f3, #f0eeee);
+  background-image: -o-linear-gradient(top, #f5f3f3, #f0eeee);
+  background-image: linear-gradient(to bottom, #f5f3f3, #f0eeee);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f3f3', endColorstr='#fff0eeee', GradientType=0);
+}
+.hero-page {
+  padding: 40px;
+}
+.hero-page hgroup {
+  width: 525px;
+  margin-left: 20px;
+}
+.hero-page hgroup:first-child {
+  width: auto;
+  margin-left: 0;
+}
+.table-centered {
+  width: 100%;
+}
+.table-centered td {
+  text-align: center;
+}
+.breadcrumb {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
 html,
 body {
   height: 100%;
@@ -7265,51 +7318,6 @@ article p.lead {
   margin: 10px;
   margin-right: 0;
 }
-.hero-unit {
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  background-color: #F7F3F2;
-  background-color: #f6f4f4;
-  background-image: -moz-linear-gradient(top, #fafafa, #f0ebeb);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafafa), to(#f0ebeb));
-  background-image: -webkit-linear-gradient(top, #fafafa, #f0ebeb);
-  background-image: -o-linear-gradient(top, #fafafa, #f0ebeb);
-  background-image: linear-gradient(to bottom, #fafafa, #f0ebeb);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffafafa', endColorstr='#fff0ebeb', GradientType=0);
-}
-.hero-unit hgroup h1 {
-  line-height: 1.3em;
-  margin-bottom: .1em;
-}
-.hero-unit h2 {
-  line-height: 1.3em;
-  margin-bottom: 0.4em;
-}
-.hero-unit:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-.well {
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  background-color: #F7F3F2;
-}
-.well:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-.well .form-actions {
-  background-color: #cccccc;
-}
 .desaturate-links a {
   color: #3c3c3c;
 }
@@ -7326,18 +7334,6 @@ article p.lead {
   -webkit-box-shadow: 0 0px 10px rgba(245, 130, 32, 0.65);
   -moz-box-shadow: 0 0px 10px rgba(245, 130, 32, 0.65);
   box-shadow: 0 0px 10px rgba(245, 130, 32, 0.65);
-}
-.bios {
-  padding-top: 30px;
-}
-.bios .well hgroup {
-  margin-bottom: 20px;
-}
-.bios img.pull-left {
-  padding: .4em;
-  background-color: #ffffff;
-  margin: 0 20px 20px 0;
-  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 .client-list {
   text-align: center;
@@ -7360,6 +7356,80 @@ article p.lead {
 }
 .commentlist .comment-meta {
   padding: 10px 0;
+}
+.bios {
+  padding-top: 30px;
+}
+.bios .well hgroup {
+  margin-bottom: 20px;
+}
+.team-blurb {
+  height: 386px;
+  overflow: hidden;
+  position: relative;
+}
+.team-blurb:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 20px;
+  background-color: rgba(247, 243, 242, 0.4);
+  background-image: -moz-linear-gradient(top, rgba(247, 243, 242, 0), #f7f3f2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(247, 243, 242, 0)), to(#f7f3f2));
+  background-image: -webkit-linear-gradient(top, rgba(247, 243, 242, 0), #f7f3f2);
+  background-image: -o-linear-gradient(top, rgba(247, 243, 242, 0), #f7f3f2);
+  background-image: linear-gradient(to bottom, rgba(247, 243, 242, 0), #f7f3f2);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00f7f3f2', endColorstr='#fff7f3f2', GradientType=0);
+  position: absolute;
+  bottom: 0;
+}
+.team-more {
+  display: block;
+  padding: .4em 0;
+  text-align: center;
+  width: 100%;
+  background-color: #d8c1b1;
+}
+.team-more:link,
+.team-more:visited,
+.team-more:hover {
+  color: #ffffff !important;
+}
+.team-more:hover {
+  background-color: #f58220;
+}
+.staff-image {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  padding: 10px;
+  background-color: #ffffff;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+.bio-header h2 {
+  font-size: 22.400000000000002px;
+}
+.bio-posts-header {
+  font-size: 28px;
+}
+.bio-post hgroup {
+  margin-top: 20px;
+}
+.bio-post hgroup time {
+  display: block;
+  font-size: 15.400000000000002px;
+  color: #999999;
+}
+.bio-post hgroup h1 {
+  margin-top: 0;
+  font-size: 16.8px;
+  line-height: 22px;
 }
 .inline-middle {
   display: inline-block;

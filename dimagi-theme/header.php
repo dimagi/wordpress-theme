@@ -19,25 +19,26 @@
 
         <link rel="shortcut icon" href="http://www.dimagi.com/favicon.png" type="image/x-icon" />
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli" />
-        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/css/main.css?v=3.1" media="screen" />
+        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/main.css?v=1.0" media="screen" />
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php get_category_feed_link('46'); ?>" />
         
         <?php include_once("analytics.php") ?>
         
-        <?php wp_deregister_script( 'jquery' );
-	    wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
-	    wp_enqueue_script( 'jquery' ); ?>
-        
+        <?php 
+        wp_deregister_script( 'jquery' );
+        wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
+        wp_enqueue_script( 'jquery' ); ?>
+              
         <!--[if lt IE 9]>
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/css/ie_fixes.css" />
         <script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js" type="text/javascript"></script>
         <![endif]-->
         <!--[if lt IE 8]>
         <script type="text/javascript">  	
-			$(function () {
-				$('.content').first().append($('<div class="ie-clear-footer" />'));
-			});
-		</script>
+    			$(function () {
+    				$('.content').first().append($('<div class="ie-clear-footer" />'));
+    			});
+    		</script>
         <![endif]-->
         
         <?php wp_head(); ?>
@@ -59,8 +60,12 @@
 			    		<li>
 			    			<a href="<?php echo get_permalink('3015'); ?>"><?php $cat=get_category('32'); echo $cat->name; ?></a>
 			    			<?php
+			    			  // todo clean this up even more.
 			    			  $wp_query_products = new WP_Query('cat=102&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); 
-			    			  $wp_query_technologies = new WP_Query('cat=112&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); ?>
+			    			  $wp_query_frameworks = new WP_Query('cat=112&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); 
+			    			  $wp_query_services = new WP_Query('cat=34,-38&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC');
+			    			  $wp_query_sectors = new WP_Query('cat=35,-38&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC');
+			    			?>
 			    			<ul>
 			    			  <li class="nav-header"><span><?php echo get_cat_name('102'); ?></span></li>
 			    				<li><a href="http://www.commcarehq.org/">CommCare HQ</a></li>
@@ -68,25 +73,23 @@
 							        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 						      <?php } ?>
 						      <li class="nav-header"><span><?php echo get_cat_name('112'); ?></span></li>
-			    				<?php while($wp_query_technologies->have_posts()) { $wp_query_technologies->the_post(); ?>
+			    				<?php while($wp_query_frameworks->have_posts()) { $wp_query_frameworks->the_post(); ?>
 							        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 						      <?php } ?>
 			    			</ul>
 			    		</li>
 			    		<li>
-			    			<a href="<?php echo get_permalink('72'); ?>"><?php $cat=get_category('34'); echo $cat->name; ?></a>
-			    			<?php $wp_query_technologies = new WP_Query('cat=34,-38&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); ?>
+			    			<a href="<?php echo get_permalink('72'); ?>"><?php echo get_cat_name('34'); ?></a>
 			    			<ul>
-			    				<?php while($wp_query_technologies->have_posts()) { $wp_query_technologies->the_post(); ?>
+			    				<?php while($wp_query_services->have_posts()) { $wp_query_services->the_post(); ?>
 						        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 						        <?php } ?>
 			    			</ul>
 			    		</li>
 			    		<li>
-			    			<a href="<?php echo get_permalink('527'); ?>"><?php $cat=get_category('35'); echo $cat->name; ?></a>
-			    			<?php $wp_query_technologies = new WP_Query('cat=35,-38&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); ?>
+			    			<a href="<?php echo get_permalink('527'); ?>"><?php echo get_cat_name('35'); ?></a>
 			    			<ul>
-			    				<?php while($wp_query_technologies->have_posts()) { $wp_query_technologies->the_post(); ?>
+			    				<?php while($wp_query_sectors->have_posts()) { $wp_query_sectors->the_post(); ?>
 						        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 						        <?php } ?>
 			    			</ul>
