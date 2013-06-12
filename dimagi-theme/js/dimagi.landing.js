@@ -1,6 +1,6 @@
 var DimagiAsyncImages = function(options) {
 	var self = this;
-	self.container = (options.container) ? $(options.container) : $('.blurbs');
+	self.container = (options.container) ? $(options.container) : $('.landing-blurbs');
 	
 	self.init = function () {
 		$(function () {

@@ -1,55 +1,28 @@
 <?php
-/**
- * @package Dimagi
- * @subpackage Dimagi_4
- */
+get_header(); 
 
-get_header(); ?>
+// current category information
+$cat = get_category(get_query_var('cat'));
 
-<div class="row">
-  <div class="span12">
-    <div class="hero-unit">
-  		<div class="pull-right span6">
-  			<?php if(!is_category('46')) { ?>
-  				<h1>Staff Blog</h1>
-  				<p><?php echo category_description('39'); ?></p>
-  			<?php } else { ?>
-  				<h1>Dimagi News</h1>
-  				<p><?php echo category_description('46'); ?></p>
-  			<?php } ?>
-  		</div>
-  		<img src="http://www.dimagi.com/wp-content/uploads/2010/01/post-it-arabic-300x168.jpg" alt="" title="" width="300" height="168" />
-  	</div>
-  </div>
-</div>
-	
-<div class="row">
-  <div class="span8">
-    <div class="pagination">
-      <ul>
-        <li><?php next_posts_link('Older Posts'); ?></li>
-        <li><?php previous_posts_link('Newer Posts'); ?></li>
-      </ul>
-    </div>
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>	
-    <article id="post-<?php the_ID(); ?>">
-    	<hgroup>
-    		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    		<h3>by <?php the_author(); ?> on <?php the_date(); ?></h3>
-    	</hgroup>
-    	<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
-    	<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-    </article>
-    <hr />
-    <?php endwhile; endif; ?>
-    <div class="pagination">
-      <ul>
-        <li><?php next_posts_link('Older Posts'); ?></li>
-        <li><?php previous_posts_link('Newer Posts'); ?></li>
-      </ul>
-    </div>
-  </div>
-  <?php get_sidebar(); ?>
-</div>
 
-<?php get_footer(); ?>
+if (cat_is_ancestor_of(46, $cat) || is_category('news')) {
+  $parentCat = get_category_by_slug('news');
+  
+} else if (cat_is_ancestor_of(39, $cat) || is_category('staff')) {
+  $parentCat = get_category_by_slug('staff');
+  
+} else if (cat_is_ancestor_of(114, $cat) || is_category('dev')) {
+  $parentCat = get_category_by_slug('dev');
+  
+} else if (cat_is_ancestor_of(119, $cat) || is_category('tech-updates')) {
+  $parentCat = get_category_by_slug('tech-updates');
+  
+}
+
+if ($parentCat) {
+  include(TEMPLATEPATH . '/archive-blog.php');
+} else {
+  include(TEMPLATEPATH . '/archive-other.php');
+}
+
+get_footer(); ?>

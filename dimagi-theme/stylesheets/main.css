@@ -210,8 +210,8 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: 'Muli', 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif;
-  font-size: 14px;
+  font-family: 'Noto Sans', 'Open Sans', sans-serif;
+  font-size: 13px;
   line-height: 20px;
   color: #3c3c3c;
   background-color: #faf7f5;
@@ -555,7 +555,7 @@ p {
 }
 .lead {
   margin-bottom: 20px;
-  font-size: 21px;
+  font-size: 19.5px;
   font-weight: 200;
   line-height: 30px;
 }
@@ -644,34 +644,34 @@ h3 {
   line-height: 40px;
 }
 h1 {
-  font-size: 38.5px;
+  font-size: 35.75px;
 }
 h2 {
-  font-size: 31.5px;
+  font-size: 29.25px;
 }
 h3 {
-  font-size: 24.5px;
+  font-size: 22.75px;
 }
 h4 {
-  font-size: 17.5px;
+  font-size: 16.25px;
 }
 h5 {
-  font-size: 14px;
+  font-size: 13px;
 }
 h6 {
-  font-size: 11.9px;
+  font-size: 11.049999999999999px;
 }
 h1 small {
-  font-size: 24.5px;
+  font-size: 22.75px;
 }
 h2 small {
-  font-size: 17.5px;
+  font-size: 16.25px;
 }
 h3 small {
-  font-size: 14px;
+  font-size: 13px;
 }
 h4 small {
-  font-size: 14px;
+  font-size: 13px;
 }
 .page-header {
   padding-bottom: 9px;
@@ -771,7 +771,7 @@ blockquote {
 }
 blockquote p {
   margin-bottom: 0;
-  font-size: 17.5px;
+  font-size: 16.25px;
   font-weight: 300;
   line-height: 1.25;
 }
@@ -816,7 +816,7 @@ code,
 pre {
   padding: 0 3px 2px;
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-size: 12px;
+  font-size: 11px;
   color: #333333;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -833,7 +833,7 @@ pre {
   display: block;
   padding: 9.5px;
   margin: 0 0 10px;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 20px;
   word-break: break-all;
   word-wrap: break-word;
@@ -874,7 +874,7 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 20px;
-  font-size: 21px;
+  font-size: 19.5px;
   line-height: 40px;
   color: #333333;
   border: 0;
@@ -889,7 +889,7 @@ input,
 button,
 select,
 textarea {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: normal;
   line-height: 20px;
 }
@@ -897,7 +897,7 @@ input,
 button,
 select,
 textarea {
-  font-family: 'Muli', 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif;
+  font-family: 'Noto Sans', 'Open Sans', sans-serif;
 }
 label {
   display: block;
@@ -924,7 +924,7 @@ input[type="color"],
   height: 20px;
   padding: 4px 6px;
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 20px;
   color: #555555;
   -webkit-border-radius: 4px;
@@ -1439,7 +1439,7 @@ select:focus:invalid:focus {
 .input-prepend .dropdown-menu,
 .input-append .popover,
 .input-prepend .popover {
-  font-size: 14px;
+  font-size: 13px;
 }
 .input-append input,
 .input-prepend input,
@@ -1470,7 +1470,7 @@ select:focus:invalid:focus {
   height: 20px;
   min-width: 16px;
   padding: 4px 5px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: normal;
   line-height: 20px;
   text-align: center;
@@ -2686,7 +2686,7 @@ button.close {
   *zoom: 1;
   padding: 4px 12px;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 20px;
   text-align: center;
   vertical-align: middle;
@@ -2770,7 +2770,7 @@ button.close {
 }
 .btn-large {
   padding: 11px 19px;
-  font-size: 17.5px;
+  font-size: 16.25px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -2781,7 +2781,7 @@ button.close {
 }
 .btn-small {
   padding: 2px 10px;
-  font-size: 11.9px;
+  font-size: 11.049999999999999px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -2796,7 +2796,7 @@ button.close {
 }
 .btn-mini {
   padding: 0 6px;
-  font-size: 10.5px;
+  font-size: 9.75px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -3111,16 +3111,16 @@ input[type="submit"].btn.btn-mini {
 .btn-group > .btn,
 .btn-group > .dropdown-menu,
 .btn-group > .popover {
-  font-size: 14px;
+  font-size: 13px;
 }
 .btn-group > .btn-mini {
-  font-size: 10.5px;
+  font-size: 9.75px;
 }
 .btn-group > .btn-small {
-  font-size: 11.9px;
+  font-size: 11.049999999999999px;
 }
 .btn-group > .btn-large {
-  font-size: 17.5px;
+  font-size: 16.25px;
 }
 .btn-group > .btn:first-child {
   margin-left: 0;
@@ -3827,7 +3827,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search .search-query {
   margin-bottom: 0;
   padding: 4px 14px;
-  font-family: 'Muli', 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif;
+  font-family: 'Noto Sans', 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
@@ -4302,7 +4302,7 @@ input[type="submit"].btn.btn-mini {
 .pagination-large ul > li > a,
 .pagination-large ul > li > span {
   padding: 11px 19px;
-  font-size: 17.5px;
+  font-size: 16.25px;
 }
 .pagination-large ul > li:first-child > a,
 .pagination-large ul > li:first-child > span {
@@ -4347,12 +4347,12 @@ input[type="submit"].btn.btn-mini {
 .pagination-small ul > li > a,
 .pagination-small ul > li > span {
   padding: 2px 10px;
-  font-size: 11.9px;
+  font-size: 11.049999999999999px;
 }
 .pagination-mini ul > li > a,
 .pagination-mini ul > li > span {
   padding: 0 6px;
-  font-size: 10.5px;
+  font-size: 9.75px;
 }
 .pager {
   margin: 20px 0;
@@ -4796,7 +4796,7 @@ a.thumbnail:focus {
 .badge {
   display: inline-block;
   padding: 2px 4px;
-  font-size: 11.844px;
+  font-size: 10.998px;
   font-weight: bold;
   line-height: 14px;
   color: #ffffff;
@@ -6649,6 +6649,9 @@ Variables for Dimagi.com
 .well .form-actions {
   background-color: #cccccc;
 }
+.well-nav {
+  padding: 8px 0px;
+}
 .hero-unit {
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
@@ -6685,6 +6688,14 @@ Variables for Dimagi.com
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Raleway', 'Open Sans', sans-serif;
+  font-weight: 500;
 }
 html,
 body {
@@ -6850,7 +6861,7 @@ header h1 {
 .nav-dimagi .nav-header {
   color: #ffffff;
   text-transform: uppercase;
-  font-size: .8em;
+  font-size: 11.049999999999999px;
   padding: 5px 10px;
   font-weight: bold;
 }
@@ -7096,8 +7107,9 @@ footer .copyright > section {
 .dimagi-carousel article h1 {
   margin: 0;
   position: absolute;
-  font-size: 30.800000000000004px;
+  font-size: 28.6px;
   line-height: 44px;
+  font-weight: 200;
   z-index: 501;
 }
 .dimagi-carousel article h1.quarter {
@@ -7216,30 +7228,25 @@ footer .copyright > section {
 .dimagi-carousel-controls .carousel-control.on {
   background-color: transparent;
 }
-.blurbs {
+.landing-blurbs {
   margin: 20px 0;
 }
-.blurbs img {
+.landing-blurbs img {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
 }
-.blurbs section > h1 {
-  font-size: 16.8px;
-  line-height: 24px;
+.landing-blurbs section > h1 {
+  font-size: 16.25px;
   margin-bottom: 5px;
 }
-.blurbs section > h1 a {
+.landing-blurbs section > h1 a {
   color: #3c3c3c;
 }
-.blurbs .async-image {
+.landing-blurbs .async-image {
   width: 220px;
   height: 144px;
   margin-bottom: 1em;
-}
-.blurbs section > p,
-.news section > p .bios p {
-  font-size: 12px;
 }
 .news {
   margin-bottom: 40px;
@@ -7260,10 +7267,10 @@ footer .copyright > section {
   margin-top: .8em;
 }
 .news section hgroup > h2 {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 16.25px;
+  line-height: 25px;
+  font-weight: 600;
   margin: 0;
-  padding-top: 31px;
   padding-bottom: 6px;
   line-height: 18px;
 }
@@ -7273,13 +7280,11 @@ footer .copyright > section {
 .news section hgroup > h2 a:hover {
   color: #f58220;
 }
-.news section hgroup > h3 {
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.4);
-  line-height: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
+.news section hgroup > date {
+  color: #999999;
+  font-weight: 500;
+  font-family: 'Raleway', 'Open Sans', sans-serif;
+  line-height: 25px;
 }
 .news section > p {
   padding-left: 20px;
@@ -7413,23 +7418,194 @@ article p.lead {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
 .bio-header h2 {
-  font-size: 22.400000000000002px;
+  font-size: 20.8px;
 }
 .bio-posts-header {
-  font-size: 28px;
+  font-size: 26px;
 }
 .bio-post hgroup {
   margin-top: 20px;
 }
 .bio-post hgroup time {
   display: block;
-  font-size: 15.400000000000002px;
+  font-size: 14.3px;
   color: #999999;
 }
 .bio-post hgroup h1 {
   margin-top: 0;
-  font-size: 16.8px;
+  font-size: 15.6px;
   line-height: 22px;
+}
+.blog-navbar-inner {
+  border-bottom: 1px solid #eeeeee;
+  *zoom: 1;
+}
+.blog-navbar-inner:before,
+.blog-navbar-inner:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.blog-navbar-inner:after {
+  clear: both;
+}
+.row-blog {
+  margin-left: 0 !important;
+  background-color: #413f3f;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+  height: 163px;
+}
+.row-blog .span4 .header-blog h1 {
+  padding-top: 32px;
+}
+.header-blog {
+  color: #9d948e;
+}
+.header-blog h1 {
+  font-weight: 200;
+  font-size: 45.5px;
+  padding-top: 49px;
+}
+.header-blog h2 {
+  font-size: 13px;
+  line-height: 13px;
+  text-transform: uppercase;
+}
+.nav-blog .nav > li > a:hover {
+  color: #f58220;
+}
+body {
+  position: relative;
+}
+#blog-sidebar {
+  *zoom: 1;
+  width: 300px;
+}
+#blog-sidebar:before,
+#blog-sidebar:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+#blog-sidebar:after {
+  clear: both;
+}
+#blog-sidebar.affix {
+  position: fixed;
+  top: 10px;
+  bottom: auto;
+  margin-left: 660px;
+}
+#blog-sidebar.affix-bottom {
+  position: absolute;
+  bottom: 0px;
+  top: auto;
+}
+.blog-posts {
+  position: relative;
+}
+.blog-post hgroup {
+  margin-bottom: 20px;
+}
+.blog-post hgroup h1 {
+  font-weight: 600;
+  font-size: 35.75px;
+  line-height: 45px;
+  margin-bottom: 5px;
+}
+.blog-post hgroup h1 a:link,
+.blog-post hgroup h1 a:visited {
+  color: #3c3c3c;
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.blog-post hgroup h1 a:hover {
+  text-decoration: none;
+  color: #f58220;
+}
+.blog-post hgroup h2 {
+  font-size: 22.75px;
+  line-height: 35px;
+  margin: 0;
+  font-weight: 600;
+}
+.blog-post hgroup date {
+  font-weight: 600;
+  color: #999999;
+}
+.blog-post .more-link {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+}
+.blog-post .more-link:link,
+.blog-post .more-link:visited {
+  color: #3c3c3c;
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.blog-post .more-link:hover {
+  text-decoration: none;
+  color: #f58220;
+}
+.blog-post p img {
+  background-color: #ffffff;
+  padding: 2px;
+  display: block;
+}
+.blog-posts hr {
+  border-top: 1px solid #d9d9d9;
+  margin-bottom: 40px;
+}
+.pager .page-number {
+  line-height: 32px;
+}
+.blog-post {
+  *zoom: 1;
+}
+.blog-post:before,
+.blog-post:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.blog-post:after {
+  clear: both;
+}
+.blog-post > h2,
+.blog-post > h3,
+.blog-post > h4 {
+  margin-top: 26px;
+}
+.blog-post blockquote {
+  margin: 20px 0;
+}
+.blog-post blockquote p {
+  margin: 0.5em 0;
+  font-size: 15.6px;
+  line-height: 24px;
+  font-family: 'Raleway', 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+.blog-post p > a:link,
+.blog-post p > a:visited {
+  color: #f58220;
+}
+#social a:hover {
+  color: #f58220;
+  text-transform: none;
+}
+#social #reply-title {
+  font-size: 19.5px;
+  line-height: 30px;
+  font-family: 'Raleway', 'Open Sans', sans-serif;
+  font-weight: 600;
 }
 .inline-middle {
   display: inline-block;

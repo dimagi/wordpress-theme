@@ -22,7 +22,7 @@
 	<h2><?php comments_number('No Responses', 'One Response', '% Responses' );?></h2>
 
 	<ol class="commentlist">
-	<?php wp_list_comments(); ?>
+	  <?php wp_list_comments(); ?>
 	</ol>
 
  <?php else : // this is displayed if there are no comments so far ?>

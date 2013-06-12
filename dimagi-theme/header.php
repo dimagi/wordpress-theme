@@ -18,8 +18,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
         <link rel="shortcut icon" href="http://www.dimagi.com/favicon.png" type="image/x-icon" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli" />
-        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/main.css?v=1.0" media="screen" />
+        <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic|Raleway:400,300,600,100,200,500,700,800,900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/main.css?v=1.2" media="screen" />
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php get_category_feed_link('46'); ?>" />
         
         <?php include_once("analytics.php") ?>
@@ -46,7 +46,7 @@
         
     </head>
     <body>
-    	<div id="content-wrap">
+    	<div id="content-wrap<?php if (is_admin()): ?> content-admin<?php endif; ?>">
         	<!--[if lt IE 7]>
     		<div class="alert alert-error">
     			<strong>Internet Explorer 6 is no longer supported.</strong><br />
@@ -104,6 +104,7 @@
 			    			<a href="<?php echo get_permalink('2'); ?>">About Us</a>
 			    			<ul>
 			    				<?php wp_list_pages('child_of=2&meta_key=menu-order&orderby=meta_value&order=ASC&title_li='); ?>
+			    				<li><a href="<?=get_category_link(39);?>">Blog</a></li>
 			    			</ul>
 			    		</li>
 			    	</ul>

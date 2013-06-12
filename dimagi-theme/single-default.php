@@ -1,11 +1,4 @@
 <?php
-/**
- * @package Dimagi
- * @subpackage Dimagi_4
- */
-
-get_header();
-the_post(); 
 
 $page_id = $post->ID;
 $header_image = get_post_meta($page_id, 'page_image_url', true);
@@ -38,5 +31,3 @@ $header_title = (!$post->_subheading) ? $post->title : $post->_subheading;
   	<?php get_sidebar(); ?>
   </div>
 </article>
-
-<?php get_footer(); ?>

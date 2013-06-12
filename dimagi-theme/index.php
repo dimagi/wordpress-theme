@@ -100,7 +100,7 @@ get_header(); ?>
 		    	</div>
 				
 				
-			    <article class="row blurbs">
+			    <article class="row landing-blurbs">
 			    	<section class="span3">
 				    	<h1><a href="http://www.commcarehq.org/">CommCare</a></h1>
 				    	<div class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/blurbs/commcare.jpg" data-imglink="http://www.commcarehq.org/"></div>
@@ -126,26 +126,26 @@ get_header(); ?>
 			    <img src="<?php bloginfo('template_directory'); ?>/img/divider.png" width="960" height="33" alt="divider" />
 				<article class="row news">
 			    	<section class="span6">
-			    		<h1><a href="/category/blog/">Staff Blog</a></h1>
+			    		<h1><a href="<?=get_category_link('39');?>">Staff Blog</a></h1>
 			    		<?php query_posts('cat=39,-46&showposts=3'); if (have_posts()) : ?>
 			    		<!--<a href="/category/blog/feed/"><img src="<?php bloginfo('template_url'); ?>/images/feed-icon.png"></a>-->
 			    		<?php while (have_posts()) : the_post(); ?>
 			    		<hgroup>
+			    			<date><?=get_the_date();?></date>
 			    			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-			    			<h3><?=get_the_date();?></h3>
 			    		</hgroup>
 			    		<?php the_excerpt(); ?>
 			    		<?php endwhile; ?>
 			    		<?php endif; ?>
 			    	</section>
 			    	<section class="span6">
-			    		<h1><a href="/category/blog/news/">Recent News</a></h1>
+			    		<h1><a href="<?=get_category_link('46');?>">Recent News</a></h1>
 			    		<?php query_posts('cat=46&showposts=3'); if (have_posts()) : ?>
 			    		<!--<a href="/category/blog/news/feed/"><img src="<?php bloginfo('template_url'); ?>/images/feed-icon.png"></a>-->
 			    		<?php while (have_posts()) : the_post(); ?>
 			    		<hgroup>
+			    			<date><?=get_the_date();?></date>
 			    			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-			    			<h3><?=get_the_date();?></h3>
 			    		</hgroup>
 			    		<?php the_excerpt(); ?>
 			    		<?php endwhile; ?>

@@ -19,9 +19,33 @@ $special_categories = array(
 );
 
 $staff_post_cat = '39';
+
+$blogRoll = array(
+  'staff', 
+  'news', 
+  'press-releases',
+  'conferences',
+  'tech-updates', 
+  'commcare-hq',
+  'commcare-mobile',
+  'commtrack',
+  'commconnect',
+  'dev'
+);
 ?>
 
 <aside class="span4">
+
+  <?php if (is_archive() && !is_single()): ?>
+  <ul class="pager">
+    <li class="previous">
+      <?php next_posts_link('<i class="icon-arrow-left"></i> Older'); ?>
+    </li>
+    <li class="next">
+      <?php previous_posts_link('Newer <i class="icon-arrow-right"></i>'); ?>
+    </li>
+  </ul>
+  <?php endif; ?>
   
   <?php if ($page_aside): ?>
   <?= $page_aside ?>
@@ -52,21 +76,6 @@ $staff_post_cat = '39';
 			</ul>
 		</nav>
 	<? endif; ?>
-	
-	<?php if (in_category($staff_post_cat) && !is_page() ) :  // staff blog post ?>
-		<nav class="well" style="padding: 8px 0px;">
-			<ul class="nav nav-list">
-				<li class="nav-header">Feeds</li>
-				<li><a href="/category/blog/news/feed">News Feed</a></li>
-				<li><a href="/category/blog/feed">Full Blog Feed</a></li>
-				<li class="nav-header">Categories</li>
-				<?php wp_list_categories('child_of='.$staff_post_cat.'&hide_empty=0&title_li=&depth=1'); ?>
-				<li class="nav-header">Archives</li>
-				<?php wp_get_archives(); ?>
-			</ul>
-		</nav>
-	<?php endif; ?>
-		
 	
 	<?php if (is_single()) { // If this is a single post ?>
 	
