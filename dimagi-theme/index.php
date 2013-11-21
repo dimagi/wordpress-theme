@@ -46,7 +46,7 @@ get_header(); ?>
 				    				  Stock tracking, requisition planning, and delivery acknowledgement for mobile workers.
 				    				</h2>
   				    			<p class="pull-right text-align-center" style="width:122px; top: 229px;">
-    				    			<a class="orange" href="http://www.dimagi.com/commtrack/">Learn More</a>
+    				    			<a class="orange" href="http://www.commtrack.org/">Learn More</a>
   				    			</p>
 				    			</hgroup>
 				    			<h2 class="pull-left" style="top: 221px; width: 310px;">
