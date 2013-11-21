@@ -39,18 +39,18 @@ get_header(); ?>
 			    		</div>
 			    		
 			    		<div id="banner-commtrack" class="item">
-				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/commtrack.jpg" data-link="http://www.dimagi.com/commtrack/">
+				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/commtrack.jpg" data-link="http://www.commtrack.org/">
 				    			<hgroup>
 				    				<h1 class="big pull-right blue" style="width: 343px; top: 57px; padding: 10px 27px; right: 0px;">CommTrack</h1>
 				    				<h2 class="pull-right" style="width: 330px; top: 150px;">
 				    				  Stock tracking, requisition planning, and delivery acknowledgement for mobile workers.
 				    				</h2>
   				    			<p class="pull-right text-align-center" style="width:122px; top: 229px;">
-    				    			<a class="orange" href="http://www.dimagi.com/commtrack/">Learn More</a>
+    				    			<a class="orange" href="http://www.commtrack.org/">Learn More</a>
   				    			</p>
 				    			</hgroup>
 				    			<h2 class="pull-left" style="top: 221px; width: 310px;">
-				    				<a class="orange" href="http://www.dimagi.com/commtrack/">A tool for mobile logistics and supply chain management.</a>
+				    				<a class="orange" href="http://www.commtrack.org/">A tool for mobile logistics and supply chain management.</a>
 				    			</h2>
 				    		</article>
 			    		</div>
@@ -112,9 +112,9 @@ get_header(); ?>
 				    	<p>CommConnect is a solution for building SMS applications allowing for two-way messaging, conditional reminders, surveys and broadcast messages.  It can be used on its own, or integrated into a CommCare application. <a href="http://www.dimagi.com/commconnect/">Learn More</a></p>
 			    	</section>
 			    	<section class="span3">
-				    	<h1><a href="http://www.dimagi.com/commtrack/">CommTrack</a></h1>		
-				    	<div class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/blurbs/commtrack.jpg" data-imglink="http://www.dimagi.com/commtrack/"></div>		    	
-				    	<p>CommTrack is a tool for mobile logistics and supply chain management. It supports mobile workers for better stock tracking, requisition planning, and delivery acknowledgement using either SMS or a CommCare application. <a href="http://www.dimagi.com/commtrack/">Learn More</a></p>
+				    	<h1><a href="http://www.commtrack.org/">CommTrack</a></h1>		
+				    	<div class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/blurbs/commtrack.jpg" data-imglink="http://www.commtrack.org/"></div>		    	
+				    	<p>CommTrack is a tool for mobile logistics and supply chain management. It supports mobile workers for better stock tracking, requisition planning, and delivery acknowledgement using either SMS or a CommCare application. <a href="http://www.commtrack.org/">Learn More</a></p>
 			    	</section>
 			    	<section class="span3">
 				    	<h1>Research</h1>
