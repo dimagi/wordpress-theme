@@ -46,7 +46,8 @@ def staging():
 def deploy():
     """ Deploy to remote host. """
     
-    if not console.confirm('Are you sure you want to deploy from github to %(environment)s?' % env, default=False):
+    if not (console.confirm('Are you sure you want to deploy from local to %(environment)s?' % env, default=False) and\
+            console.confirm('Did you \'git pull\' latest master?', default=False)):
         utils.abort('Deployment aborted.')
     local('cd dimagi-theme')
     local("find . -name '*.DS_Store' -delete")
