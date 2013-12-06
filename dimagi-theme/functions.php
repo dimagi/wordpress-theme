@@ -34,7 +34,6 @@ if ( function_exists('register_sidebar') )
         'after_title' => '</h2>',
     ));
 ?>
-
 <?php
 /**
  * Tests if any of a post's assigned categories are descendants of target categories
