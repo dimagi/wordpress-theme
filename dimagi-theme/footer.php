@@ -91,7 +91,7 @@
 		        		<section class="copyright">
     							&copy; <?php echo date('Y'); ?>, Dimagi, Inc.
     						</section>
-        		</div>
+        		</section>
         	</div>
         </footer>
         <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js" type="text/javascript"></script>
