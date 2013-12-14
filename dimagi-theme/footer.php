@@ -61,6 +61,7 @@
 	        		<div class="span2">
 	        			<section class="social">
 	        				<a href="http://twitter.com/dimagi" rel="tooltip" title="Follow @dimagi on Twitter"><img src="<?php bloginfo('template_directory'); ?>/img/social/twitter.png" alt="@dimagi" /></a><a href="http://github.com/dimagi" rel="tooltip" title="Fork dimagi on github"><img src="<?php bloginfo('template_directory'); ?>/img/social/github.png" alt="dimagi on github" /></a><a href="http://facebook.com/dimagi.inc" rel="tooltip" title="Like dimagi on Facebook"><img src="<?php bloginfo('template_directory'); ?>/img/social/facebook.png" alt="like dimagi on facebook" /></a>
+                                                <a href="./feed" rel="tooltip" title="Subscribe to dimagi on RSS"><i class="fa fa-rss-square fa-2x" style="color: #C0C0C0; vertical-align: middle"></i></a>
 	        			</section>
 		        		<address>
 		        			<section>
