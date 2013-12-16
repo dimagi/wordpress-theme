@@ -13,6 +13,7 @@ $header_subhead = get_post_meta($page_id, 'page_subhead_text', true);
 $header_lead = get_post_meta($page_id, 'page_lead_text', true);
 
 $commcare_text = get_post_meta($page_id, 'technologies_commcare_text', true);
+$commtrack_text = get_post_meta($page_id, 'technologies_commtrack_text', true);
 
 $header_title = (!$post->_subheading) ? $post->post_title : $post->_subheading;
 
@@ -43,16 +44,24 @@ $header_title = (!$post->_subheading) ? $post->post_title : $post->_subheading;
 	  <div class="span12">
 	     <h2><?php echo get_cat_name('102'); ?></h2>
 	  </div>
-		<div class="span6">
-			<div class="well" style="height:132px;">
-	            <a href="<?php the_permalink(); ?>" class="inline-middle"><img src="<?php bloginfo('template_directory'); ?>/img/misc/technologies_commcare_thumb.png" alt="CommCare icon" /></a>
-	            <div class="inline-middle span4 desaturate-links" style="width: 296px;">
-		            <h2><a href="http://www.commcarehq.org/">CommCare</a></h2>
-		            <p><a href="http://www.commcarehq.org/"><?= $commcare_text ?></a></p>
-	            </div>
-	        </div>
-	    </div>
-	    
+          <div class="span6">
+            <div class="well" style="height:132px;">
+              <a href="<?php the_permalink(); ?>" class="inline-middle"><img src="<?php bloginfo('template_directory'); ?>/img/misc/technologies_commcare_thumb.png" alt="CommCare icon" /></a>
+                <div class="inline-middle span4 desaturate-links" style="width: 296px;">
+                  <h2><a href="http://www.commcarehq.org/">CommCare</a></h2>
+                  <p><a href="http://www.commcarehq.org/"><?= $commcare_text ?></a></p>
+                </div>
+            </div>
+          </div>
+          <div class="span6">
+            <div class="well" style="height:132px;">
+              <a href="<?php the_permalink(); ?>" class="inline-middle"><img src="<?php bloginfo('template_directory'); ?>/img/misc/technologies_commtrack_thumb.jpg" alt="CommTrack icon" /></a>
+                <div class="inline-middle span4 desaturate-links" style="width: 296px;">
+                  <h2><a href="http://www.commtrack.org/home/">CommTrack</a></h2>
+                  <p><a href="http://www.commctrack.org/home/"><?= $commtrack_text ?></a></p>
+                </div>
+            </div>
+          </div>
 <?php 
 // todo cleanup
 query_posts('cat=102&showposts=-1&meta_key=menu-order&orderby=meta_value&order=ASC'); while ( have_posts() ) { the_post(); ?>

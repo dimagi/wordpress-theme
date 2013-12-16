@@ -69,7 +69,7 @@
 			    			<ul>
 			    			  <li class="nav-header"><span><?php echo get_cat_name('102'); ?></span></li>
 			    				<li><a href="http://www.commcarehq.org/">CommCare HQ</a></li>
-			    				<li><a href="http://www.commtrack.org/">CommTrack</a></li>
+			    				<li><a href="http://www.commtrack.org/home/">CommTrack</a></li>
 			    				<?php while($wp_query_products->have_posts()) { $wp_query_products->the_post(); ?>
 							        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 						      <?php } ?>
