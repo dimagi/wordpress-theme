@@ -88,7 +88,7 @@
     							</section>
     							
 		        		</address>
-                        <section class="copyright"><a href="./policy" style="color: #FFFFF0">Privacy</a></section>
+                        <section class="copyright"><a href="<?php echo get_permalink('176242760'); ?>" style="color: #FFFFF0">Privacy</a></section>
 		        		<section class="copyright">
     							&copy; <?php echo date('Y'); ?>, Dimagi, Inc.
     						</section>
