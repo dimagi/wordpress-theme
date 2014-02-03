@@ -21,6 +21,7 @@
         <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic|Raleway:400,300,600,100,200,500,700,800,900' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/main.css?v=1.2" media="screen" />
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php get_category_feed_link('46'); ?>" />
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         
         <?php include_once("analytics.php") ?>
         
