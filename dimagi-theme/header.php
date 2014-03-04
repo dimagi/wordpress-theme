@@ -104,6 +104,7 @@
 			    		<li>
 			    			<a href="<?php echo get_permalink('2'); ?>">About Us</a>
 			    			<ul>
+                                                        <li><a href="/careers_main/">Careers</a></li>
 			    				<?php wp_list_pages('child_of=2&meta_key=menu-order&orderby=meta_value&order=ASC&title_li='); ?>
 			    				<li><a href="<?=get_category_link(39);?>">Blog</a></li>
 			    			</ul>

@@ -56,10 +56,10 @@ get_header(); ?>
 			    		</div>
 			    		
 			    		<div id="banner-hire" class="item">
-				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/brazil.jpg" data-link="http://www.dimagi.com/about/careers/">
+				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/brazil.jpg" data-link="/careers_main/">
 				    			<hgroup>
 				    				<h1 class="big pull-right" style="text-align: right;">We're Hiring</h1>
-				    				<h2 class="pull-right" style="width: 300px; top: 90px;"><a class="orange" href="http://www.dimagi.com/about/careers/">Currently looking for software engineers to join our team.</a></h2>
+				    				<h2 class="pull-right" style="width: 300px; top: 90px;"><a class="orange" href="/careers_main/">Currently looking for software engineers to join our team.</a></h2>
 				    			</hgroup>
 				    			<h2 class="pull-left" style="top:28px; width:234px;">
 				    				<a href="http://www.dimagi.com/the-away-month/" class="blue">Learn about our recent Away Month in Brazil.</a>
@@ -76,10 +76,10 @@ get_header(); ?>
 			    			</article>
 			    		</div>
 			    		<div id="banner-sa" class="item">
-				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/cape_town.jpg" data-link="http://www.dimagi.com/about/careers/">
+				    		<article class="async-image" data-imgsrc="<?php bloginfo('template_directory'); ?>/img/banners/cape_town.jpg" data-link="/careers_main/">
 				    			<hgroup>
 				    				<h1 class="big pull-left">Dimagi in South Africa</h1>
-				    				<h2 class="pull-left" style="top:90px; left:43px; width:280px;"><a class="orange" href="http://www.dimagi.com/about/careers/">We've opened a new project office in Cape Town.</a></h2>
+				    				<h2 class="pull-left" style="top:90px; left:43px; width:280px;"><a class="orange" href="/careers_main/">We've opened a new project office in Cape Town.</a></h2>
 				    			</hgroup>
 				    		</article>
 			    		</div>
