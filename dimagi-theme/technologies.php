@@ -58,7 +58,7 @@ $header_title = (!$post->_subheading) ? $post->post_title : $post->_subheading;
               <a href="<?php the_permalink(); ?>" class="inline-middle"><img src="<?php bloginfo('template_directory'); ?>/img/misc/technologies_commtrack_thumb.jpg" alt="CommTrack icon" /></a>
                 <div class="inline-middle span4 desaturate-links" style="width: 296px;">
                   <h2><a href="http://www.commtrack.org/home/">CommTrack</a></h2>
-                  <p><a href="http://www.commctrack.org/home/"><?= $commtrack_text ?></a></p>
+                  <p><a href="http://www.commtrack.org/home/"><?= $commtrack_text ?></a></p>
                 </div>
             </div>
           </div>
